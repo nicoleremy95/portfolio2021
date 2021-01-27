@@ -2,6 +2,7 @@ import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Landing from '../components/Landing';
 import Buttons from '../components/Buttons';
+import Aboutme from '../components/Aboutme';
 
 const useStyles = makeStyles((Theme)=>
     createStyles({
@@ -15,8 +16,18 @@ export default function LandingP() {
     const classes = useStyles();
     return (
         <div className={classes.landingContainer}>
-            <Landing/>
-            <Buttons/>
+            <section>
+                <Landing/>
+            </section>
+
+            <section>
+                <Buttons/>
+            </section>
+            
+            <section>
+                <Aboutme/>
+            </section>
+
         </div>
     )
 }
