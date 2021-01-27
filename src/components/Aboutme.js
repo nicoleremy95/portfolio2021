@@ -1,10 +1,9 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { Link } from 'react-scroll';
-import {Grid, Paper }from '@material-ui/core/';
+import {createStyles, makeStyles} from '@material-ui/core/styles';
+import {Grid}from '@material-ui/core/';
 
 
-const useStyles = makeStyles((Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
         alignItems: 'center',
