@@ -11,16 +11,23 @@ const useStyles = makeStyles(()=>
         },
         link: {
             textDecoration: "none",
+            
+        },
+        button: {
+            '&:hover': {
+                backgroundImage: 'linear-gradient(to bottom right, #f56a79,  #1aa6b7)',
+            },
         },
         buttonOutline:{
             borderStyle: 'solid',
             borderWidth: '20',
             borderColor: 'white',
             width: '30%',
-            height: '40vh',
+            height: '30vh',
             position: 'relative',
             padding: '15px',
             display: 'inline-block',
+           
         },
         buttonText: {
             color: "white !important",
@@ -41,8 +48,8 @@ export default function Buttons(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-             <Link to={props.to} className={classes.link}>
-                 <Button>
+             <Link to={props.to} className={classes.link} >
+                 <Button className={classes.button}>
                     <div className={classes.buttonOutline}>
                         <p className={classes.buttonText}>{props.text}</p>
                     </div>
