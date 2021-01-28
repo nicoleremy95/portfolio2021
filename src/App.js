@@ -1,27 +1,28 @@
 import './App.css';
 import Appbar from './components/Appbar/Appbar';
-import Landing from './pages/Landing';
-import Aboutme from './pages/Aboutme';
-import Projects from './pages/Projects';
-import Resume from './pages/Resume';
+import LandingPage from './pages/LandingPage';
+import AboutmePage from './pages/AboutmePage';
+import ProjectsPage from './pages/ProjectsPage';
+import ResumePage from './pages/ResumePage';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Appbar/>
         <Switch>
           <Route exact path = '/'>
-            <Landing/>
+            <LandingPage/>
           </Route>
           <Route exact path = '/about-me'>
-            <Aboutme/>
+            <AboutmePage/>
           </Route>
           <Route exact path = '/projects'>
-            <Projects/>
+            <ProjectsPage/>
           </Route>
           <Route exact path = '/resume'>
-            <Resume/>
+            <ResumePage/>
           </Route>
         </Switch>
       </Router>

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Landing from '../components/Landing/Landing';
 import Buttons from '../components/Buttons/Buttons';
 import headshot from '../images/headshot.jpg';
@@ -7,12 +7,10 @@ import Loading from '../components/Loading/Loading';
 import Logo from '../components/Logo/Logo';
 import './landing.css';
 
-const useStyles = makeStyles((Theme)=>
+const useStyles = makeStyles(()=>
     createStyles({
         landingContainer: {
-            backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",
-            
-            
+            backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
         },
        
         // img: {

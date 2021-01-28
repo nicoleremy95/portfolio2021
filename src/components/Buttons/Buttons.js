@@ -2,6 +2,7 @@ import React from 'react';
 import { createStyles, makeStyles} from '@material-ui/core/styles';
 import {Button} from '@material-ui/core/';
 import { Link } from 'react-router-dom';
+import CallMadeIcon from '@material-ui/icons/CallMade';
 
 
 const useStyles = makeStyles(()=>
@@ -29,6 +30,9 @@ const useStyles = makeStyles(()=>
             display: 'inline-block',
            
         },
+        icon: {
+            color: 'white'
+        },
         buttonText: {
             color: "white !important",
             transformOrigin: '0 0',
@@ -52,6 +56,7 @@ export default function Buttons(props) {
              <Link to={props.to} className={classes.link} >
                  <Button className={classes.button}>
                     <div className={classes.buttonOutline}>
+                        <CallMadeIcon className={classes.icon}/>
                         <p className={classes.buttonText}>{props.text}</p>
                     </div>
                  </Button>

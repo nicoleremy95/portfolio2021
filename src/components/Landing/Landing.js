@@ -17,6 +17,7 @@ const useStyles = makeStyles(() =>
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        // zIndex: "-1"
         // margin: 'auto'
     },
     text: {
@@ -46,33 +47,22 @@ export default function Landing() {
             <Box className={classes.animation}>
                 <Logo/>
             </Box >
-            <Grid container >
-                <Grid item xs={1} sm={1} md={3} lg={4} direction="column"></Grid>
-                {/* <Grid 
-                    item xs={10} sm={8} md={6} lg={4}  
-                >
+            <Grid 
+                container
+                direction="row"
+                justify="space-between"
+                alignItems="baseline" 
+            >
+                <Grid item xs={1} sm={1} md={3} lg={4} direction="column"></Grid> 
                     <Buttons to='/resume' text="Resume"/>
                     <Buttons to='/projects' text="Projects"/> 
-                    <Buttons to='/about-me' text="AboutMe"/>    
-                </Grid> */}
-              
-                <Grid 
-                    item xs={2} sm={2} md={2} lg={1} direction="column" 
-                >
-                    <Buttons to='/resume' text="Resume"/>
-                </Grid>
-                <Grid 
-                    item xs={2} sm={2} md={2} lg={1} direction="column"
-                >
-                    <Buttons to='/projects' text="Projects"/>         
-                </Grid>
-                <Grid 
-                    item xs={2} sm={2} md={2} lg={1} direction="column" 
-                >
-                    <Buttons to='/about-me' text="AboutMe"/>
-                </Grid>
+                    <Buttons to='/about-me' text="AboutMe"/> 
+                <Grid item xs={1} sm={1} md={2} lg={3} direction="column"></Grid> 
+
             </Grid>
-           
         </div>
     )
 }
+
+
+ 
