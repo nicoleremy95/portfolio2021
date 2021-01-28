@@ -4,6 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((Theme) =>
   createStyles({
@@ -12,10 +13,23 @@ const useStyles = makeStyles((Theme) =>
 );
 
 const options = [
-    'Home',
-    'About Me',
-    'Projects',
-    'Resume',
+    {
+        title: "Home",
+        to: '/'
+    },
+    {
+        title: "About Me",
+        to: '/about-me'
+    },
+    {
+        title: "Projects",
+        to: '/projects'
+    },
+    {
+        title: "Resume",
+        to: '/resume'
+    },
+    
 ];
 
 const ITEM_HEIGHT = 48;
@@ -56,8 +70,10 @@ export default function Appbar() {
           }}
         >
           {options.map((option) => (
-            <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-              {option}
+            <MenuItem key={option.title} selected={option.title === 'Pyxis'} onClick={handleClose}>
+              <Link to={option.to}>
+              {option.title}
+              </Link>
             </MenuItem>
           ))}
         </Menu>
