@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Aboutme from '../components/Aboutme/Aboutme';
 
-export default function Aboutme() {
+export default function AboutmeP() {
     return (
         <div>
-            <h1>Aboutme page</h1>
+            <Aboutme/>
         </div>
     )
 }

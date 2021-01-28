@@ -33,6 +33,7 @@ const useStyles = makeStyles(()=>
             color: "white !important",
             transformOrigin: '0 0',
             transform: 'rotate(-90deg)',
+            textOrientation: "upright",
             letterSpacing: "2px",
             textTransform: 'uppercase',
             justifyContent: 'start',

@@ -1,19 +1,27 @@
 import React from 'react';
 import { createStyles, makeStyles} from '@material-ui/core/styles';
-import {Grid}from '@material-ui/core/';
-import Emoji from './Emoji';
-import Buttons from './Buttons';
+import {Grid, Container, Box}from '@material-ui/core/';
+import Emoji from '../Emoji/Emoji';
+import Buttons from '../Buttons/Buttons';
+import Logo from '../Logo/Logo';
+
 
 
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
         flexGrow: 1,
-      },
+       
+    },
+    animation: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // margin: 'auto'
+    },
     text: {
         textAlign: "justify",
-        marginTop: 500
-
+        marginTop: 200
     },
   }),
 );
@@ -30,14 +38,14 @@ export default function Landing() {
                             <h1 
                                 className={classes.text}
                             >
-                                <Emoji 
-                                className={classes.emoji}
-                                label="waving-hand" symbol="👋🏽"/> 
                                 hello my name is Nicole Remy. I am a Full Stack Web Developer with a background in Architecture, Interior Design, Geographic Information Science, and customer service. Welcome to my portfolio.
                             </h1>
                         </section> 
                     </Grid>
             </Grid> 
+            <Box className={classes.animation}>
+                <Logo/>
+            </Box >
             <Grid container >
                 <Grid item xs={1} sm={1} md={3} lg={4} direction="column"></Grid>
                 {/* <Grid 
@@ -64,6 +72,7 @@ export default function Landing() {
                     <Buttons to='/about-me' text="AboutMe"/>
                 </Grid>
             </Grid>
+           
         </div>
     )
 }
