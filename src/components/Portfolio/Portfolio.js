@@ -24,7 +24,8 @@ const portfolioArr= [
        role: "Project Manager",
        description: "PLANiT is a collaborative travel planning app for groups looking to make the most of their next adventure.",
        info: "PLANiT is a collaborative travel planning app for groups looking to make the most of their next adventure. Users can create planning boards, or maps as we call them, where an unlimited amount of guests can be invited to suggest or vote on plans within user-customized trip catergories (e.g. Resturants, Accommodation, Hikes, Entertainment etc.) The app makes group consensus clear with visual outputs for voting stats and a print itinerary function that ranks the leading suggestions at any given time. Along with a chat room unique to each map, communicating has never been more accessible and centralized. Whether you are trying coordinate plans with a group or are just having fun dreaming about your next vacation, planning a trip has never been easier or as stress free! PLANiT - connecting our world to your plan! PLANiT uses a React.js front end, along with MongoDB to create a robust, full MERN application. Tools and packages that were used to make this application possible include socket.io, nodemailer, react-scroll, react-animate-on-scroll, ant-design, axios, and more. The team has plans to integrate more APIs and features to make PLANiT a travel-prep must-have!",
-       github: "https://github.com/zackdeacon/planit-backend, https://github.com/zackdeacon/planit-frontend",
+       githubFront: "https://github.com/zackdeacon/planit-frontend",
+       githubBack: "https://github.com/zackdeacon/planit-frontend",
        app: "https://travelplanit.herokuapp.com/",
      } ,
 
@@ -61,7 +62,7 @@ const portfolioArr= [
        app: "https://derek-watson14.github.io/drinkME/"
      },
      {
-       name: "Budget Tracker",
+       name: "Budgets",
     // //    img: budgetTrackerImg,
        tech: [
         // // //  <Icon className="Portfolio-tech-icons" icon={html5} height="25" />,          
@@ -79,7 +80,7 @@ const portfolioArr= [
        app: "https://ner-budget-tracker.herokuapp.com/"
      },
      {
-       name: "Employee Directory",
+       name: "Directory",
     // //    img: employeeDirectoryImg,
        tech: [
         // // // //  <Icon className="Portfolio-tech-icons" icon={reactIcon} height="25"/>,
@@ -95,7 +96,7 @@ const portfolioArr= [
        app: "https://serene-shelf-43817.herokuapp.com/"
      },
      {
-       name: "Employee Profiles CL",
+       name: "Employees",
     // //    img: employeeProfilesImg,
        tech: [
         // // //  <Icon className="Portfolio-tech-icons" icon={logoNodejs} height="25" /> ,         
@@ -111,7 +112,7 @@ const portfolioArr= [
        app: "https://drive.google.com/file/d/1QwCm1s24y60vBc7kDLJNDbWrIdjgMnMF/view?usp=sharing",
      },
      {
-       name: "Coding Assesment",
+       name: "Assesment",
     // //    img: codingAssesmentImg,
        tech: [
         // // //  <Icon className="Portfolio-tech-icons" icon={html5} height="25" />,          
@@ -127,7 +128,7 @@ const portfolioArr= [
        app: "https://nicoleremy95.github.io/hw4_coding_assesment/"
      },
      {
-       name: "Password Generator",
+       name: "Passwords",
     // //    img: passwordGeneratorImg,
        tech: [
         // // //  <Icon className="Portfolio-tech-icons" icon={html5} height="25" />,          
@@ -157,6 +158,8 @@ export default function Portfolio() {
                 tech={project.tech}
                 description={project.description}
                 github={project.github}
+                githubFront={project.githubFront}
+                githubBack={project.githubBack}
                 app={project.app}
               />
             ))}

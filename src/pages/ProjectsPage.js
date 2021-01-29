@@ -13,7 +13,6 @@ export default function ProjectsP() {
     const classes = useStyles();
     return (
         <div className={classes.projectContainer}>
-            <h1>Projects</h1>
             <Portfolio/>
         </div>
     )
