@@ -5,29 +5,44 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import HomeIcon from '@material-ui/icons/Home';
+import DevicesIcon from '@material-ui/icons/Devices';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 
 const useStyles = makeStyles((Theme) =>
   createStyles({
-    
+    appBarLinkBlack: {
+        textDecoration: "none",
+        color: "black !important"
+      }
   }),
 );
 
 const options = [
     {
         title: "Home",
-        to: '/'
+        to: '/',
+        icon: <HomeIcon/>
     },
     {
         title: "About Me",
-        to: '/about-me'
+        to: '/about-me',
+        icon: <AccountCircleIcon/>
+
     },
     {
         title: "Projects",
-        to: '/projects'
+        to: '/projects',
+        icon: <DevicesIcon/>
+
+        
     },
     {
         title: "Resume",
-        to: '/resume'
+        to: '/resume',
+        icon: <ReceiptIcon/>
+
     },
     
 ];
@@ -35,8 +50,11 @@ const options = [
 const ITEM_HEIGHT = 48;
 
 export default function Appbar() {
+    const classes = useStyles();
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -71,8 +89,9 @@ export default function Appbar() {
         >
           {options.map((option) => (
             <MenuItem key={option.title} selected={option.title === 'Pyxis'} onClick={handleClose}>
-              <Link to={option.to}>
-              {option.title}
+              <Link to={option.to} className={classes.appBarLinkBlack}>
+                {option.title}
+                {option.icon}
               </Link>
             </MenuItem>
           ))}

@@ -1,9 +1,20 @@
 import React from 'react'
+import { createStyles, makeStyles} from '@material-ui/core/styles';
+import Portfolio from '../components/Portfolio/Portfolio';
 
+const useStyles = makeStyles(()=>
+    createStyles({
+        projectContainer: {
+            backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
+        },
+    })
+)
 export default function ProjectsP() {
+    const classes = useStyles();
     return (
-        <div>
-            <h1>Projects page</h1>
+        <div className={classes.projectContainer}>
+            <h1>Projects</h1>
+            <Portfolio/>
         </div>
     )
 }
