@@ -24,7 +24,10 @@ const useStyles = makeStyles(()=>
             letterSpacing: "2px",
             textTransform: 'uppercase',
             fontSize: '6vw !important',
-            textDecoration: 'underline'
+            textDecoration: 'underline',
+            marginTop: '-20px',
+            marginBottom: '1vh',
+
         }
     })
 )
