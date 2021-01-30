@@ -63,15 +63,20 @@ export default function PortfolioCard(props) {
         <div>
             <Container maxWidth="md" className={classes.contianer}>
                 <Grid container >
-                    <Grid item xs={3} >
+                    <Grid item xs={2} >
                         <h1 className={classes.project}>PROJECTS</h1> 
                         {/* <div >{props.tech}</div> */}
                     </Grid>
-                    <Grid item xs={9} className={classes.projectOutline}>
+                    <Grid item xs={10} className={classes.projectOutline}>
                         <LargeLinks to={props.app} text={props.name}/>
                         <h2>{props.description}</h2>
                         <div className={classes.tech}>{props.tech}</div>
-                        {props.role? <h2>{props.role}: {props.work}</h2>: <h2>Individual</h2>}
+                        {props.role? 
+                            <div>
+                            <h2>{props.role}</h2>
+                            <h3>{props.work}</h3>
+                            </div>
+                            : <h2>Individual</h2>}
                         
                         <h2>{props.type}</h2>
                         
