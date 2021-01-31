@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 import LargeLinks from '../LargeLinks/LargeLinks';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DevicesIcon from '@material-ui/icons/Devices';
-import Carousel from 'react-material-ui-carousel';
 
 
 const useStyles = makeStyles((Theme) =>
@@ -85,79 +84,16 @@ const useStyles = makeStyles((Theme) =>
 
 export default function PortfolioCard(props) {
     const classes = useStyles();
-    var featured = [
-        {
-            name: "PLANiT",
-            //   img: planitImg,
-            featured: true,
-            tech: [
-            //   <FontAwesomeIcon icon={faCss3} size="2x"/> ,
-            //   <FontAwesomeIcon icon={faHtml5} size="2x" /> ,
-            //   <FontAwesomeIcon icon={faJs} size="2x"/> ,
-            //   <FontAwesomeIcon icon={faReact} size="2x" /> ,
-            //   <FontAwesomeIcon icon={faNode} size="2x" /> ,
-            //   <FontAwesomeIcon icon={faNpm} size="2x"/> ,
-            //   <Icon className="Portfolio-tech-icons" icon={antDesignOutlined}  height="30"/>,
-            //   <Icon className="Portfolio-tech-icons" icon={mongodbIcon}  height="30"/>,
-            ],
-            //  type: 
-            //   <Badge badgeContent={5} color="secondary">
-            //     <PeopleAltIcon/>
-            //   </Badge>,
-             role: "Project Manager",
-             work: "frontend design · backend logic · voting · comments · photo upload · user authentication",
-             description: "Colloborative travel planning app",
-             info: "PLANiT is a collaborative travel planning app for groups looking to make the most of their next adventure. Users can create a trip, invite guests, vote on travel plans, and render/email a final itinerary. Along with a chat room unique to each map, communicating has never been more accessible and centralized. Whether you are trying coordinate plans with a group or are just having fun dreaming about your next vacation, planning a trip has never been easier or as stress free! PLANiT - connecting our world to your plan!",
-             githubFront: "https://github.com/zackdeacon/planit-frontend",
-             githubBack: "https://github.com/zackdeacon/planit-frontend",
-             app: "https://travelplanit.herokuapp.com/",
-           } ,
-      
-           {
-             name: "PawsLife",
-            //   img: pawsLifeImg,
-              featured: true,
-             tech: [
-            //   <FontAwesomeIcon icon={faCss3} size="2x"/> ,
-            //   <FontAwesomeIcon icon={faJs} size="2x"/> ,
-            //   <FontAwesomeIcon icon={faHtml5} size="2x" /> ,
-            //   <FontAwesomeIcon icon={faNode} size="2x" /> ,
-            //   <FontAwesomeIcon icon={faNpm} size="2x"/> ,
-            //   <Icon icon={materializecssIcon}  height="30"/>,
-            //   <Icon icon={mysqlIcon}  height="30"/>,
-            //   <Icon icon={handlebarsIcon}  width="30"/>,
-                 
-             ],
-            //  type:  
-                // <Badge badgeContent={4} color="secondary">
-                //   <PeopleAltIcon/>
-                // </Badge>,
-             role: "Frontend Lead",
-             work: "frontend design · backend logic · API routes · CRUD Functionality",
-             description: "Social community website of pet owners and pet service providers",
-             info: "PawsLife is a social community website of pet owners and pet service providers. Pawslife gives the user the ability to create an account as a pet owner of a dog or cat, and or a pet provider for dogs or cats. As an owner, a user can keep track of all of their pets for which they can book provider services. As a provider, a user can post pet care services for other members of pawslife to book. This application has full CRUD for user accounts and CRD for pets and posts.",
-             github: "https://github.com/rickyg218/PawsLIfe-",
-             app: "https://pawslife.herokuapp.com/"
-           },
-           
-    ]
+    
+    
     return (
         <div>
-                <Carousel>
-                {
-                    featured.map( (item, i) => (
-                        <div>
-                            <h1>{item.name}</h1>
-                            <h1>{item.description}</h1>
-                        </div>
-                    ))
-                }
-                </Carousel>
+               
             
             <Container maxWidth="md" className={classes.contianer}>
                 <Grid container >
                     <Grid item xs={1} sm={1} md={2} lg={2}>
-                        <h1 className={classes.project}>PROJECTS</h1> 
+                        {/* <h1 className={classes.project}>PROJECTS</h1>  */}
                     </Grid>
                     <Grid item xs={10} className={classes.projectOutline}>
                         <LargeLinks to={props.app} text={props.name}/>

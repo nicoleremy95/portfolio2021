@@ -1,7 +1,8 @@
 import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Badge from '@material-ui/core/Badge';
-
+import Carousel from 'react-material-ui-carousel';
+import Featured from '../Featured/Featured';
 import PortfolioCard from '../PortfolioCard/PortfolioCard';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -278,8 +279,12 @@ export default function Portfolio() {
   
     return (
         <div>
-            <div className="Portfolio-cards">
+          <div>
+            <Featured/>
+          </div> 
+          <div>
             {portfolioArr.map(project =>(
+            
               <PortfolioCard 
                 name={project.name} 
                 featured={project.featured}
@@ -288,10 +293,9 @@ export default function Portfolio() {
                 type={project.type}
                 img={project.img} 
                 role={project.role}
-                // tech={project.tech}
                 tech={project.tech.map(thing =>(
                   <span
-                   className={classes.tech}>{thing}
+                    className={classes.tech}>{thing}
                   </span>
                 ))}
                 description={project.description}
@@ -302,6 +306,6 @@ export default function Portfolio() {
               />
             ))}
         </div>
-        </div>
+      </div>
     )
 }

@@ -1,14 +1,19 @@
 
-
+.featured {
+    font-size: 60px;
+    text-transform: uppercase;
+    display: inline;
+}
 .arrow {
     z-index:-1;
     width: 0; 
     height: 0; 
-    border-top: 60px solid transparent;
-    border-bottom: 60px solid transparent;
-    border-left: 60px solid white;
-    border-right: 60px solid white;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid white;
+    border-right: 30px solid white;
     animation: pulse 5s infinite;
+
 
 }
 

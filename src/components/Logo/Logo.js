@@ -4,6 +4,8 @@ import './logo.css';
 
 export default function Logo() {
     return (
-        <div className="arrow"></div>
+        <div className="arrow">
+            <h1 className="featured">featured apps</h1>
+        </div>
     )
 }
