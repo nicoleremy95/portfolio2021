@@ -1,7 +1,8 @@
 import React from 'react'
 import { createStyles, makeStyles} from '@material-ui/core/styles';
 import Resume from '../components/Resume/Resume';
-import ResumePDF from '../images/Resume_Portfolio_Remy.pdf'
+
+
 const useStyles = makeStyles(()=>
     createStyles({
         resumeContainer: {
@@ -14,7 +15,6 @@ export default function ResumeP() {
 
     return (
         <div className={classes.resumeContainer}>
-            <h1>Resume</h1>
             <Resume />
         </div>
     )

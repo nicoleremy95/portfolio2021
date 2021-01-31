@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap');
-body {
+html,body {
+  padding: 0;
+  overflow-x: hidden;
   margin: 0;
   font-family: 'Jura', sans-serif;
   font-family: 'Play', sans-serif;

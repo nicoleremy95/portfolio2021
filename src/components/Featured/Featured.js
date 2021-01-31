@@ -71,7 +71,8 @@ const useStyles = makeStyles((Theme) =>
   createStyles({
     root: {
       // backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
-      backgroundColor: '#d9ecf2'
+      backgroundColor: '#d9ecf2',
+      padding: '1vh'
     },
     appTitle: {
       fontSize: "7vw",
