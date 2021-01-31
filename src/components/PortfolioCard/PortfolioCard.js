@@ -35,7 +35,7 @@ const useStyles = makeStyles((Theme) =>
     },
     divider: {
         color: "white ",
-        margin: '20px',
+        margin: '10px',
         fontSize: '4vw'
 
     },
@@ -76,7 +76,7 @@ const useStyles = makeStyles((Theme) =>
     },
     type: {
         textAlign: 'center',
-        fontSize: '2vh !important'
+        fontSize: '2vh !important',
 
     }
   }),
@@ -92,10 +92,13 @@ export default function PortfolioCard(props) {
             
             <Container maxWidth="md" className={classes.contianer}>
                 <Grid container >
-                    <Grid item xs={1} sm={1} md={2} lg={2}>
+                    {/* <Grid item xs={1} sm={1} md={2} lg={2}> */}
                         {/* <h1 className={classes.project}>PROJECTS</h1>  */}
-                    </Grid>
-                    <Grid item xs={10} className={classes.projectOutline}>
+                    {/* </Grid> */}
+                    <Grid 
+                        // item xs={10} 
+                        className={classes.projectOutline}
+                    >
                         <LargeLinks to={props.app} text={props.name}/>
 
                         <div justifyContent="center"><img className={classes.image} src={props.img} alt={props.name}/></div>
@@ -108,7 +111,10 @@ export default function PortfolioCard(props) {
                                 <h3 ><span className={classes.role}>{props.role} · {props.work} ·  Team size: {props.type}</span></h3>
                                 
                             </div>
-                            : <div className={classes.type}><h4 >solo {props.type}</h4></div>}
+                            : 
+                            // <div className={classes.type}><h4 >{props.type}</h4></div>
+                            null
+                            }
                         
                         {/* <h4>Team size: {props.type}</h4> */}
                         <div className={classes.tech}>{props.tech}</div>
@@ -117,16 +123,18 @@ export default function PortfolioCard(props) {
                             <div>
                                 <div>
                                 <Tooltip title="view Application">
-                                    <a className={classes.linkWhite} target="blank" href={props.app}><DevicesIcon/><span className={classes.linkText}>Application</span></a>
+                                    <a className={classes.linkWhite} target="blank" href={props.app}><DevicesIcon className={classes.icon}/><span className={classes.linkText}>Application</span></a>
                                 </Tooltip>
                                 </div>
                             <span>
+                            {/* <div> */}
                                 <Tooltip title="view GitHub">
-                                    <a className={classes.linkWhite} target="blank" href={props.githubFront}><GitHubIcon/><span className={classes.linkText}>Github Views</span></a>
+                                    <a className={classes.linkWhite} target="blank" href={props.githubFront}><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github Views</span></a>
                                 </Tooltip>
-                                {/* <span className={classes.divider2}>/</span> */}
+                                {/* </div> */}
+                                <span className={classes.divider}>/</span>
                                 <Tooltip title="view GitHub">
-                                    <a className={classes.linkWhite} target="blank" href={props.githubBack}><GitHubIcon/><span className={classes.linkText}>Github API</span></a>
+                                    <a className={classes.linkWhite} target="blank" href={props.githubBack}><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github API</span></a>
                                 </Tooltip>
                                 </span>
                             </div>

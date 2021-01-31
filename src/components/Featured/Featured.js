@@ -34,7 +34,7 @@ const featuredArr =[
      description: "Colloborative travel planning app",
      info: "PLANiT is a collaborative travel planning app for groups looking to make the most of their next adventure. Users can create a trip, invite guests, vote on travel plans, and render/email a final itinerary. Along with a chat room unique to each map, communicating has never been more accessible and centralized. Whether you are trying coordinate plans with a group or are just having fun dreaming about your next vacation, planning a trip has never been easier or as stress free! PLANiT - connecting our world to your plan!",
      githubFront: "https://github.com/zackdeacon/planit-frontend",
-     githubBack: "https://github.com/zackdeacon/planit-frontend",
+     githubBack: "https://github.com/zackdeacon/planit-backend",
      app: "https://travelplanit.herokuapp.com/",
    } ,
    {
@@ -73,6 +73,10 @@ const useStyles = makeStyles((Theme) =>
       // backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
       backgroundColor: '#d9ecf2'
     },
+    appTitle: {
+      fontSize: "7vw",
+      textTransform: 'uppercase'
+    },
     featured: {
       background: "-webkit-linear-gradient(#ff414d, #1aa6b7)",
       "-webkit-background-clip": "text",
@@ -81,17 +85,12 @@ const useStyles = makeStyles((Theme) =>
       textAlign: 'center',
       fontSize: "7vw",
     },
-    logo: {
-      // justifyContent: 'center',
-            // marginBottom: '100vh'
-
-    },
-    carousel: {
-      // marginTop: '60vh'
-    },
     carouselContent: {
       marginTop: '20vh'
-    }
+    },
+    links: {
+      marginTop: '-12%'
+    },
   }),
 );
 
@@ -104,44 +103,35 @@ export default function Featured(item) {
             <Logo title="featured apps" />
           </section>
           <section className={classes.carousel}>
-          <Carousel >
+            <Carousel >
               {featuredArr.map((item, i) => (
                 <div className={classes.carouselContent}>
-                 
+                  <div className={classes.appTitle}>
+                    <h1>{item.name}</h1>
+                  </div> 
+                  <div className={classes.links}>
+                    <LargeLinks to={item.app} text="View App"/>  
 
-                 <LargeLinks to={item.app} text={item.name}/>                   
-                  <h1>{item.description}</h1>
-                    <h3>{item.info}</h3>
+                  </div>
+                  
                     {item.githubFront && item.githubBack? 
                             <div>
-                                <div>
-                                <Tooltip title="view Application">
-                                    <a className={classes.linkWhite} target="blank" href={item.app}><DevicesIcon/><span className={classes.linkText}>Application</span></a>
-                                    {/* <LargeLinks to={item.app} text="view app"/>                    */}
-
+                                <Tooltip title="view GitHub Views">
+                                  <LargeLinks to={item.githubFront} text="GitHub Views"/>  
                                 </Tooltip>
-                                </div>
-                            <span>
-                                <Tooltip title="view GitHub">
-                                    <a className={classes.linkWhite} target="blank" href={item.githubFront}><GitHubIcon/><span className={classes.linkText}>Github Views</span></a>
+                                <Tooltip title="view GitHub API">
+                                  <LargeLinks to={item.githubBack} text="GitHub API"/>  
                                 </Tooltip>
-                                {/* <span className={classes.divider2}>/</span> */}
-                                <Tooltip title="view GitHub">
-                                    <a className={classes.linkWhite} target="blank" href={item.githubBack}><GitHubIcon/><span className={classes.linkText}>Github API</span></a>
-                                </Tooltip>
-                                </span>
                             </div>
                             : 
                             <div>
-                                <Tooltip title="view Application">
-                                    <a className={classes.linkWhite} target="blank" href={item.app}><DevicesIcon className={classes.icon}/><span className={classes.linkText}>Application</span></a>
-                                </Tooltip>
-                                <span className={classes.divider}>/</span>
                                 <Tooltip title="view GitHub">
-                                    <a className={classes.linkWhite} target="blank" href={item.github}><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
+                                <LargeLinks to={item.github} text="GitHub"/>  
                                 </Tooltip>
                             </div>
                         }
+                        <h1>{item.description}</h1>
+                    <h3>{item.info}</h3>
                 </div>
               ))}
             </Carousel>

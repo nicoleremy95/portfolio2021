@@ -46,6 +46,9 @@ const useStyles = makeStyles((Theme) =>
     tech: {
       margin: "2%vw",
     },
+    portfoliocard: {
+      marginTop: '10vh'
+    }
   }),
 );
 const featuredArr =[
@@ -63,16 +66,17 @@ const featuredArr =[
       <Icon className="Portfolio-tech-icons" icon={antDesignOutlined}  height="30"/>,
       <Icon className="Portfolio-tech-icons" icon={mongodbIcon}  height="30"/>,
     ],
-     type: 
-      <Badge badgeContent={5} color="secondary">
-        <PeopleAltIcon/>
-      </Badge>,
+     type: 5
+      // <Badge badgeContent={5} color="secondary">
+      //   <PeopleAltIcon/>
+      // </Badge>
+      ,
      role: "Project Manager",
      work: "frontend design · backend logic · voting · comments · photo upload · user authentication",
      description: "Colloborative travel planning app",
      info: "PLANiT is a collaborative travel planning app for groups looking to make the most of their next adventure. Users can create a trip, invite guests, vote on travel plans, and render/email a final itinerary. Along with a chat room unique to each map, communicating has never been more accessible and centralized. Whether you are trying coordinate plans with a group or are just having fun dreaming about your next vacation, planning a trip has never been easier or as stress free! PLANiT - connecting our world to your plan!",
      githubFront: "https://github.com/zackdeacon/planit-frontend",
-     githubBack: "https://github.com/zackdeacon/planit-frontend",
+     githubBack: "https://github.com/zackdeacon/planit-backend",
      app: "https://travelplanit.herokuapp.com/",
    } ,
    {
@@ -90,10 +94,11 @@ const featuredArr =[
      <Icon icon={handlebarsIcon}  width="30"/>,
         
     ],
-    type:  
-       <Badge badgeContent={4} color="secondary">
-         <PeopleAltIcon/>
-       </Badge>,
+    type: 4
+      //  <Badge badgeContent={4} color="secondary">
+      //    <PeopleAltIcon/>
+      //  </Badge>
+    ,
     role: "Frontend Lead",
     work: "frontend design · backend logic · API routes · CRUD Functionality",
     description: "Social community website of pet owners and pet service providers",
@@ -118,10 +123,11 @@ const portfolioArr= [
         <Icon className="Portfolio-tech-icons" icon={antDesignOutlined}  height="30"/>,
         <Icon className="Portfolio-tech-icons" icon={mongodbIcon}  height="30"/>,
       ],
-       type: 
-        <Badge badgeContent={5} color="secondary">
-          <PeopleAltIcon/>
-        </Badge>,
+       type: 5
+        // <Badge badgeContent={5} color="secondary">
+        //   <PeopleAltIcon/>
+        // </Badge>
+        ,
        role: "Project Manager",
        work: "frontend design · backend logic · voting · comments · photo upload · user authentication",
        description: "Colloborative travel planning app",
@@ -146,10 +152,11 @@ const portfolioArr= [
         <Icon icon={handlebarsIcon}  width="30"/>,
            
        ],
-       type:  
-          <Badge badgeContent={4} color="secondary">
-            <PeopleAltIcon/>
-          </Badge>,
+       type:  4
+          // <Badge badgeContent={4} color="secondary">
+          //   <PeopleAltIcon/>
+          // </Badge>
+        ,
        role: "Frontend Lead",
        work: "frontend design · backend logic · API routes · CRUD Functionality",
        description: "Social community website of pet owners and pet service providers",
@@ -167,10 +174,12 @@ const portfolioArr= [
         <FontAwesomeIcon icon={faBootstrap} size="2x" /> ,
 
        ],
-       type:  
-          <Badge badgeContent={4} color="secondary">
-            <PeopleAltIcon/>
-          </Badge>,
+       type: 4
+          // <Badge badgeContent={4} color="secondary">
+          //   <PeopleAltIcon/>
+          // </Badge>
+          
+        ,
        role: "Project Manager",
        work: "backend lead · beer routes",
        description: "Find cocktail recipes, nearby grocery stores for ingredients, and local breweries near you!",
@@ -282,7 +291,7 @@ export default function Portfolio() {
           <div>
             <Featured/>
           </div> 
-          <div>
+          <div className={classes.portfoliocard}>
             {portfolioArr.map(project =>(
             
               <PortfolioCard 

@@ -39,7 +39,7 @@ export default function Landing() {
                         <section className={classes.logo}>
                             <Logo title="nicole remy"/>
                         </section>
-                    <Grid item xs={5} sm={4} md={3} lg={12} direction="column">
+                    <Grid item xs={12}  direction="column">
                         
                         <section>
                             <h1 

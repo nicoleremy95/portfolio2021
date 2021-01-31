@@ -14,11 +14,6 @@ const useStyles = makeStyles(()=>
             textDecoration: "none",
             
         },
-        button: {
-            '&:hover': {
-                backgroundImage: 'linear-gradient(to bottom right, #f56a79,  #1aa6b7)',
-            },
-        },
         buttonOutline:{
             borderStyle: 'solid',
             borderWidth: '20',
@@ -28,6 +23,9 @@ const useStyles = makeStyles(()=>
             position: 'relative',
             padding: '15px',
             display: 'inline-block',
+            '&:hover': {
+                backgroundImage: 'linear-gradient(to bottom right, #f56a79,  #1aa6b7)',
+            },
            
         },
         icon: {
