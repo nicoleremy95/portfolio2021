@@ -24,6 +24,9 @@ const useStyles = makeStyles(() =>
         textAlign: "justify",
         marginTop: 200
     },
+    logo: {
+        paddingTop: '20vh'
+    }
   }),
 );
 
@@ -32,9 +35,12 @@ export default function Landing() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Grid container>
-                <Grid item xs={1} sm={1} md={3} lg={4} direction="column"></Grid>
-                    <Grid item xs={10} sm={8} md={6} lg={4} direction="column">
+            <Container maxWidth="md">
+                        <section className={classes.logo}>
+                            <Logo title="nicole remy"/>
+                        </section>
+                    <Grid item xs={5} sm={4} md={3} lg={12} direction="column">
+                        
                         <section>
                             <h1 
                                 className={classes.text}
@@ -43,10 +49,7 @@ export default function Landing() {
                             </h1>
                         </section> 
                     </Grid>
-            </Grid> 
-            <Box className={classes.animation}>
-                <Logo/>
-            </Box >
+            </Container> 
             <Grid 
                 container
                 direction="row"

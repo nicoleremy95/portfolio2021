@@ -101,7 +101,7 @@ export default function Featured(item) {
         <div className={classes.root}>
           <Container maxWidth="md">
           <section className={classes.logo}>
-            <Logo  />
+            <Logo title="featured apps" />
           </section>
           <section className={classes.carousel}>
           <Carousel >
@@ -142,10 +142,6 @@ export default function Featured(item) {
                                 </Tooltip>
                             </div>
                         }
-                    {/* <Buttons to={item.app} text="Application"/>
-                    <Buttons to={item.githubFront} text="Github Views"/>
-                    <Buttons to={item.githubBack} text="Github API"/>
-                    <Buttons to={item.github} text="Github"/> */}
                 </div>
               ))}
             </Carousel>
