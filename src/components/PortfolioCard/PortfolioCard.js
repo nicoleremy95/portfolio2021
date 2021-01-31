@@ -56,7 +56,6 @@ const useStyles = makeStyles((Theme) =>
         justifyContent: 'space-between',
         display: 'flex',
         direction: 'row'
-
     },
     image:{
         maxWidth: '100%',

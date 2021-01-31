@@ -2,10 +2,30 @@ import React from 'react';
 import {createStyles, makeStyles} from '@material-ui/core/styles';
 import {Grid, Container, Typography}from '@material-ui/core/';
 import Logo from '../Logo/Logo';
+import { Icon, InlineIcon } from '@iconify/react';
+
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Tooltip from '@material-ui/core/Tooltip';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import mongodbIcon from '@iconify-icons/simple-icons/mongodb';
+import mysqlIcon from '@iconify-icons/grommet-icons/mysql';
+import antDesignOutlined from '@iconify-icons/ant-design/ant-design-outlined';
+import handlebarsIcon from '@iconify-icons/logos/handlebars';
+import materializecssIcon from '@iconify-icons/logos/materializecss';
+import bxlJquery from '@iconify-icons/bx/bxl-jquery';
+//Brands Style : fab
+import { 
+    faJs, 
+    faCss3,
+    faReact,
+    faNode,
+    faNpm,
+    faHtml5,
+    faBootstrap
+  } from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -14,6 +34,16 @@ const useStyles = makeStyles((theme) =>
         flexGrow: 1,
         padding: "4vh",
         
+    },
+    techBox: {
+        marginTop: '20px',
+        marginBottom: '20px',
+        justifyContent: 'space-between',
+        display: 'flex',
+        direction: 'row'
+    },
+    tech: {
+        margin: "2%vw",
     },
     sections: {
         marginTop: '30vh'
@@ -72,6 +102,24 @@ const useStyles = makeStyles((theme) =>
   }),
 );
 
+const skills =[
+    <FontAwesomeIcon  icon={faCss3} size="2x"/>,
+    <FontAwesomeIcon icon={faHtml5} size="2x" />,
+    <FontAwesomeIcon icon={faJs} size="2x"/>,
+    <FontAwesomeIcon icon={faReact} size="2x" />,
+    <FontAwesomeIcon icon={faNode} size="2x" />,
+    <FontAwesomeIcon icon={faNpm} size="2x"/>,
+    <Icon className="Portfolio-tech-icons" icon={antDesignOutlined}  height="30"/>,
+    <Icon className="Portfolio-tech-icons" icon={mongodbIcon}  height="30"/>,
+    <Icon icon={materializecssIcon}  height="30"/>,
+    <Icon icon={mysqlIcon}  height="30"/>,
+    <Icon icon={handlebarsIcon}  width="30"/>,
+    <Icon className="Portfolio-tech-icons" icon={bxlJquery}  height="30"/>,
+    <FontAwesomeIcon icon={faBootstrap} size="2x" /> ,
+]
+
+const apple =["hi", "andks", "andosn"]
+
 export default function Aboutme() {
     const classes = useStyles();
     return (
@@ -112,6 +160,30 @@ export default function Aboutme() {
                         {/* <h3 className={classes.year}>2018</h3>    */}
                         <p className={classes.p}>2018  · <span><a href="https://www.usc.edu/" target="blank">University of Southern California</a></span>  · B.S. in <span><a href="https://spatial.usc.edu/undergraduate/b-s-in-geodesign/" target="blank">GeoDesign</a></span></p>
                         <p className={classes.p}> 2020  ·  <span><a href="https://www.washington.edu/" target="blank">University of Washington </a></span>  ·  Certificate in <span><a href="https://bootcamp.uw.edu/" target="blank">Full Stack Web Development</a></span></p>
+                    </div>
+                    <div className={classes.border}>
+                        <h1 className={classes.year}>Skills</h1>
+                        <div className={classes.techBox}>
+                        <FontAwesomeIcon   icon={faCss3} size="1x"/>
+    <FontAwesomeIcon  icon={faHtml5} size="1x" />
+    <FontAwesomeIcon  icon={faJs} size="1x"/>
+    <FontAwesomeIcon  icon={faReact} size="1x" />
+    <FontAwesomeIcon  icon={faNode} size="1x" />
+    <FontAwesomeIcon  icon={faNpm} size="1x"/>
+    <Icon   icon={antDesignOutlined}  height="20"/>
+    <Icon   icon={mongodbIcon}  height="20"/>
+    <Icon   con={materializecssIcon}  height="20"/>
+    <Icon  icon={mysqlIcon}  height="20"/>
+    <Icon  icon={handlebarsIcon}  width="20"/>
+    <Icon   icon={bxlJquery}  height="20"/>
+    <FontAwesomeIcon  icon={faBootstrap} size="1x" /> 
+                        </div>
+                       
+                        {/* {skills.map(thing=>{
+                            <span
+                             className={classes.tech}>thing
+                           </span>
+                        })} */}
                     </div>
                 
                 </section>
