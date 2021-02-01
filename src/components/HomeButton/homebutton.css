@@ -1,0 +1,11 @@
+
+.home-button {
+    z-index:-1;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #f56a79;
+    border-right: 20px solid #f56a79;
+    /* transform: rotate(90); */
+}

@@ -11,7 +11,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import DevicesIcon from '@material-ui/icons/Devices';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import Logo from '../Logo/Logo';
-
+import Tooltip from '@material-ui/core/Tooltip';
+import HomeButton from '../HomeButton/HomeButton';
+import AppBar from '@material-ui/core/AppBar';
 
 const useStyles = makeStyles((Theme) =>
   createStyles({
@@ -69,34 +71,38 @@ export default function Appbar() {
 
     return (
         <div>
-        <Toolbar>
+          {/* <Appbar> */}
+          <Toolbar>
+          
+          <IconButton aria-label="show 4 new mails" color="inherit">
+            <Tooltip title="home" aria-label="home">
+              <Link  
+                to="/" 
+                className={classes.appBarLinkWhite} 
+              >
+                <HomeButton/>
+              </Link>
+            </Tooltip>   
+            {/* <Logo title="home"/> */}
+          </IconButton>
           <IconButton
             // aria-label="more"
             aria-controls="long-menu"
             aria-haspopup="true"
             onClick={handleClick}
             edge="end"
+            className={classes.menuButton}
             aria-label="display more actions" 
-            edge="end" 
             color="inherit"
           >
             <MoreVertIcon />
-          </IconButton>
-          <IconButton aria-label="show 4 new mails" color="inherit">
-            {/* <Tooltip title="home" aria-label="home"> */}
-              {/* <Link  
-                to="/" 
-                className={classes.appBarLinkWhite} 
-              > */}
-                {/* <HomeIcon/> */}
-              {/* </Link> */}
-            {/* </Tooltip>    */}
-            {/* <Logo title="home"/> */}
           </IconButton>
           <Menu
             id="long-menu"
             anchorEl={anchorEl}
             keepMounted
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             open={open}
             onClose={handleClose}
             PaperProps={{
@@ -117,6 +123,8 @@ export default function Appbar() {
           </Menu>
         </Toolbar>
        
+          {/* </Appbar> */}
+        
       </div>
     )
 }
