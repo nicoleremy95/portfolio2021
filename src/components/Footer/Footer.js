@@ -10,7 +10,8 @@ import {Grid, Container, Typography}from '@material-ui/core/';
 const useStyles = makeStyles((theme) =>
   createStyles({
     footerContainer: {
-        // backgroundColor:'pink'
+        // backgroundColor:'pink',
+        // marginTop: '20px'
     },
     root: {
         display: 'flex',
@@ -51,34 +52,7 @@ const useStyles = makeStyles((theme) =>
     }
   }),
 );
-// const useStyles =makeStyles(()=>{
-//     createStyles({
-//         footerContainer: {
-//             backgroundColor: 'pink'
-//         },
-//         linkWhite: {
-//             textDecoration: "none",
-//             color: "white !important",
-//             fontSize: '4vh'
-//         },
-//         icon: {
-//             fontSize: '4vw',
-//         },
-//         linkText: {
-//             marginLeft: '10px',
-//             fontSize: '3vw',
-//             textTransform: 'uppercase',
-//             background: "-webkit-linear-gradient(#eee, #333)",
-//             "-webkit-background-clip": "text",
-//             "-webkit-text-fill-color": "transparent",
-//         },
-//         divider: {
-//             color: "white ",
-//             margin: '10px',
-//             fontSize: '4vw'
-//         },
-//     })
-// })
+
 export default function Footer() {
     const classes = useStyles();
 

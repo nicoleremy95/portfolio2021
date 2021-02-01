@@ -8,7 +8,12 @@ import CallMadeIcon from '@material-ui/icons/CallMade';
 const useStyles = makeStyles(()=>
     createStyles({
         root: {
-            flexGrow: 1,
+            // flexGrow: 1,
+            // marginTop: '20px',
+            // marginBottom: '20px',
+            // justifyContent: 'space-between',
+            // display: 'flex',
+            // direction: 'row'
         },
         link: {
             textDecoration: "none",
@@ -50,7 +55,7 @@ const useStyles = makeStyles(()=>
 export default function Buttons(props) {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <span className={classes.root}>
              <Link to={props.to} className={classes.link} >
                  <Button className={classes.button}>
                     <div className={classes.buttonOutline}>
@@ -59,7 +64,7 @@ export default function Buttons(props) {
                     </div>
                  </Button>
             </Link> 
-        </div>
+        </span>
        
     )
 }

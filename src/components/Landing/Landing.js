@@ -4,29 +4,38 @@ import {Grid, Container, Box}from '@material-ui/core/';
 import Emoji from '../Emoji/Emoji';
 import Buttons from '../Buttons/Buttons';
 import Logo from '../Logo/Logo';
+import headshot from '../../images/headshot.jpg';
 
 
 
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
-        flexGrow: 1,
-       
+        flexGrow: 1,       
     },
-    animation: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        // zIndex: "-1"
-        // margin: 'auto'
+    textContainer: {
+        marginBottom: '20px'
     },
     text: {
         textAlign: "justify",
-        marginTop: 200
+        marginTop: "30px",
+        marginBottom: '50px'
     },
     logo: {
-        paddingTop: '20vh'
-    }
+        paddingTop: '10vh',
+        marginBottom: '150px',
+    },
+    buttonContainer: {
+        marginBottom: '60px',
+        justifyContent: 'space-between',
+        display: 'flex',
+        direction: 'row'
+    },
+    img: {
+        display:"inline-block" ,
+        maxWidth:"100px",
+        height:"auto"       
+    },
   }),
 );
 
@@ -35,34 +44,37 @@ export default function Landing() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Container maxWidth="md">
-                        <section className={classes.logo}>
-                            <Logo title="nicole remy"/>
-                        </section>
-                    <Grid item xs={12}  direction="column">
-                        
-                        <section>
-                            <h1 
-                                className={classes.text}
-                            >
-                                hello my name is Nicole Remy. I am a Full Stack Web Developer with a background in Architecture, Interior Design, Geographic Information Science, and customer service. Welcome to my portfolio.
-                            </h1>
-                        </section> 
-                    </Grid>
+            <Container maxWidth="sm">
+                    <section 
+                        className={classes.logo}
+                    >
+                        <Logo title="nicole remy"/>
+                    </section>
+                    {/* <section>
+                        <img
+                            src={headshot}
+                            alt="nicole"
+                            className={classes.img}
+                        />
+                    </section> */}
+                    <section 
+                        className={classes.textContainer}
+                    >
+                        <h1 
+                            className={classes.text}
+                        >
+                            Hello. My name is Nicole Remy and I am a Full Stack Web Developer with a background in Architecture, Interior Design, Geographic Information Science, and customer service. Welcome to my portfolio.
+                        </h1>
+                    </section> 
+                    <section 
+                        className={classes.buttonContainer}
+                    >
+                        <Buttons to='/resume' text="Resume"/>
+                        <Buttons to='/projects' text="Projects"/> 
+                        <Buttons to='/about-me' text="AboutMe"/> 
+                    </section>
             </Container> 
-            <Grid 
-                container
-                direction="row"
-                justify="space-between"
-                alignItems="baseline" 
-            >
-                <Grid item xs={1} sm={1} md={3} lg={4} direction="column"></Grid> 
-                    <Buttons to='/resume' text="Resume"/>
-                    <Buttons to='/projects' text="Projects"/> 
-                    <Buttons to='/about-me' text="AboutMe"/> 
-                <Grid item xs={1} sm={1} md={2} lg={3} direction="column"></Grid> 
-
-            </Grid>
+            
         </div>
     )
 }
