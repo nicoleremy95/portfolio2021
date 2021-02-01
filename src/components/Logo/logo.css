@@ -1,6 +1,6 @@
 
 .featured {
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
     display: inline;
 }
@@ -13,8 +13,6 @@
     border-left: 30px solid white;
     border-right: 30px solid white;
     animation: pulse 5s infinite;
-
-
 }
 
 

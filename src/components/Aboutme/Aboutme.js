@@ -32,8 +32,7 @@ const useStyles = makeStyles((theme) =>
    
     root: {
         flexGrow: 1,
-        padding: "4vh",
-        
+        // marginBottom: '100px'
     },
     techBox: {
         marginTop: '20px',
@@ -46,7 +45,7 @@ const useStyles = makeStyles((theme) =>
         margin: "2%vw",
     },
     sections: {
-        marginTop: '30vh'
+        // marginBottom: '600px',
     },
     border: {
         marginBottom: "3vh",
@@ -64,7 +63,7 @@ const useStyles = makeStyles((theme) =>
         color: "white !important",
         letterSpacing: "2px",
         textTransform: 'uppercase',
-        fontSize: '5vh !important',
+        fontSize: '4vh !important',
     },
     p: {
         fontSize: '3vh !important',
@@ -72,27 +71,33 @@ const useStyles = makeStyles((theme) =>
     linkWhite: {
         textDecoration: "none",
         color: "white !important",
-        // fontSize: '4vh'
     },
     icon: {
-        fontSize: '4vw',
+        fontSize: '15pt',
     },
     linkText: {
         marginLeft: '10px',
-        fontSize: '3vw',
+        fontSize: '15pt',
         textTransform: 'uppercase'
     },
     divider: {
         color: "white ",
         margin: '10px',
-        fontSize: '4vw'
+        fontSize: '15pt'
 
     },
+    logo: {
+        paddingTop: '10vh',
+        marginBottom: '150px',
+    },
+    bio: {
+        textAlign: 'justify'
+    }
   }),
 );
 
 const skills =[
-    <FontAwesomeIcon  icon={faCss3} size="2x"/>,
+    <FontAwesomeIcon icon={faCss3} size="2x"/>,
     <FontAwesomeIcon icon={faHtml5} size="2x" />,
     <FontAwesomeIcon icon={faJs} size="2x"/>,
     <FontAwesomeIcon icon={faReact} size="2x" />,
@@ -112,71 +117,65 @@ export default function Aboutme() {
     return (
         <div>
             {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
-           <div className={classes.root} id="about-me">  
-            <Container maxWidth="md">
-                <section className={classes.logo}>
-                    <Logo title="about me" />
-                </section>  
-                <section className={classes.sections}>
-                    <div className={classes.border}>
-                        <h1 className={classes.year}>contact</h1>
-                        
-                        
-                        <Tooltip title="view GitHub">
-                                    <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
-                         </Tooltip>
-                         <span className={classes.divider}>/</span>
+            <div className={classes.root}>  
+                <Container maxWidth="md">
+                    <section className={classes.logo}>
+                        <Logo title="about me" />
+                    </section>
+                    <section >
+                        <div className={classes.border}>
+                            <h1 className={classes.year}>contact</h1>
+                            
+                            
+                            <Tooltip title="view GitHub">
+                                        <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
+                            </Tooltip>
+                            <span className={classes.divider}>/</span>
 
-                        <Tooltip title="view Linkedin">
-                                    <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><LinkedInIcon className={classes.icon}/><span className={classes.linkText}>Linkedin</span></a>
-                         </Tooltip>
-                         <span className={classes.divider}>/</span>
-                         <Tooltip title="email me">
-                                    <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
-                         </Tooltip>
-
-                    </div>
-                    <div className={classes.border}>
-                        <h1 className={classes.year}>Bio</h1>
-                        <h3>Full Stack Web Developer with a background in Architecture, Geographic Information Science, and customer service. Self-motivated with a strong work ethic and a passion for problem solving, innovating, and learning. Experience working/communicating with stakeholders and collaborating in teams. Committed to leadership, thinking out of the box, and acquiring new skills. 
-                        </h3>
-                    </div>
-                    <div className={classes.border}>
-                        <h1 className={classes.year}>Education</h1>
-                    
-                        {/* <h3 className={classes.year}>2018</h3>    */}
-                        <p className={classes.p}>2018  · <span><a href="https://www.usc.edu/" target="blank">University of Southern California</a></span>  · B.S. in <span><a href="https://spatial.usc.edu/undergraduate/b-s-in-geodesign/" target="blank">GeoDesign</a></span></p>
-                        <p className={classes.p}> 2020  ·  <span><a href="https://www.washington.edu/" target="blank">University of Washington </a></span>  ·  Certificate in <span><a href="https://bootcamp.uw.edu/" target="blank">Full Stack Web Development</a></span></p>
-                    </div>
-                    <div className={classes.border}>
-                        <h1 className={classes.year}>Skills</h1>
-                        <div className={classes.techBox}>
-                        <FontAwesomeIcon   icon={faCss3} size="1x"/>
-    <FontAwesomeIcon  icon={faHtml5} size="1x" />
-    <FontAwesomeIcon  icon={faJs} size="1x"/>
-    <FontAwesomeIcon  icon={faReact} size="1x" />
-    <FontAwesomeIcon  icon={faNode} size="1x" />
-    <FontAwesomeIcon  icon={faNpm} size="1x"/>
-    <Icon   icon={antDesignOutlined}  height="20"/>
-    <Icon   icon={mongodbIcon}  height="20"/>
-    <Icon   con={materializecssIcon}  height="20"/>
-    <Icon  icon={mysqlIcon}  height="20"/>
-    <Icon  icon={handlebarsIcon}  width="20"/>
-    <Icon   icon={bxlJquery}  height="20"/>
-    <FontAwesomeIcon  icon={faBootstrap} size="1x" /> 
+                            <Tooltip title="view Linkedin">
+                                        <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><LinkedInIcon className={classes.icon}/><span className={classes.linkText}>Linkedin</span></a>
+                            </Tooltip>
+                            <span className={classes.divider}>/</span>
+                            <Tooltip title="email me">
+                                        <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
+                            </Tooltip>
+            
                         </div>
-                       
-                        {/* {skills.map(thing=>{
-                            <span
-                             className={classes.tech}>thing
-                           </span>
-                        })} */}
-                    </div>
-                
-                </section>
-                
-            </Container>    
-                
+                    </section>
+                    <section>
+                        <div className={classes.border}>
+                            <h1 className={classes.year}>Bio</h1>
+                            <h3 className={classes.bio}>Full Stack Web Developer with a background in Architecture, Geographic Information Science, and customer service. Self-motivated with a strong work ethic and a passion for problem solving, innovating, and learning. Experience working/communicating with stakeholders and collaborating in teams. Committed to leadership, thinking out of the box, and acquiring new skills. 
+                            </h3>
+                        </div>
+                    </section>  
+                    <section className={classes.sections}>
+                        <div className={classes.border}>
+                            <h1 className={classes.year}>Education</h1>
+                            {/* <h3 className={classes.year}>2018</h3>    */}
+                            <h3 className={classes.p}>2018  · <span><a href="https://www.usc.edu/" target="blank">University of Southern California</a></span>  · B.S. in <span><a href="https://spatial.usc.edu/undergraduate/b-s-in-geodesign/" target="blank">GeoDesign</a></span>  ·  3.61 GPA</h3>
+                            <h3 className={classes.p}> 2020  ·  <span><a href="https://www.washington.edu/" target="blank">University of Washington </a></span>  ·  Certificate in <span><a href="https://bootcamp.uw.edu/" target="blank">Full Stack Web Development</a></span>  ·  4.00 GPA</h3>
+                        </div>
+                        <div className={classes.border}>
+                            <h1 className={classes.year}>Skills</h1>
+                            <div className={classes.techBox}>
+                                <FontAwesomeIcon   icon={faCss3} size="1x"/>
+                                <FontAwesomeIcon  icon={faHtml5} size="1x" />
+                                <FontAwesomeIcon  icon={faJs} size="1x"/>
+                                <FontAwesomeIcon  icon={faReact} size="1x" />
+                                <FontAwesomeIcon  icon={faNode} size="1x" />
+                                <FontAwesomeIcon  icon={faNpm} size="1x"/>
+                                <Icon   icon={antDesignOutlined}  height="20"/>
+                                <Icon   icon={mongodbIcon}  height="20"/>
+                                <Icon   con={materializecssIcon}  height="20"/>
+                                <Icon  icon={mysqlIcon}  height="20"/>
+                                <Icon  icon={handlebarsIcon}  width="20"/>
+                                <Icon   icon={bxlJquery}  height="20"/>
+                                <FontAwesomeIcon  icon={faBootstrap} size="1x" /> 
+                            </div>
+                        </div>
+                    </section>
+                </Container>   
             </div> 
         </div>
         

@@ -24,8 +24,9 @@ const useStyles = makeStyles(()=>
             maxWidth: '100%'
         },
         logo: {
-            marginBottom: '10vh'
-        }
+            paddingTop: '10vh',
+            marginBottom: '150px',
+        },
     })
 )
 
