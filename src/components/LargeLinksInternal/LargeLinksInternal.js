@@ -35,7 +35,7 @@ export default function LargeLinksInternal(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Link to={props.to} target="blank" className={classes.link} >
+            <Link to={props.to}  className={classes.link} >
                 <div className={classes.buttonOutline}>
                     <h1 className={classes.buttonText}>{props.text} <CallMadeIcon className={classes.icon}/></h1>
                 </div>
