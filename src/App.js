@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import AboutmePage from './pages/AboutmePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ResumePage from './pages/ResumePage';
+import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -28,6 +29,7 @@ function App() {
             <ResumePage/>
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );

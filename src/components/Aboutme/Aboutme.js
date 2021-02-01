@@ -62,21 +62,10 @@ const useStyles = makeStyles((theme) =>
     },
     year: {
         color: "white !important",
-        // transformOrigin: '0 0',
-        // transform: 'rotate(-90deg)',
-        // textOrientation: "upright",
         letterSpacing: "2px",
         textTransform: 'uppercase',
-        // justifyContent: 'start',
         fontSize: '5vh !important',
-        // position: 'sticky',
-        // bottom: 0,
-        // left: 0,
-        // marginLeft: '10px',
     },
-    // h1: {
-    //     fontSize: '200px !important'
-    // },
     p: {
         fontSize: '3vh !important',
     },
@@ -118,8 +107,6 @@ const skills =[
     <FontAwesomeIcon icon={faBootstrap} size="2x" /> ,
 ]
 
-const apple =["hi", "andks", "andosn"]
-
 export default function Aboutme() {
     const classes = useStyles();
     return (
@@ -145,7 +132,7 @@ export default function Aboutme() {
                          </Tooltip>
                          <span className={classes.divider}>/</span>
                          <Tooltip title="email me">
-                                    <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}>email </span></a>
+                                    <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
                          </Tooltip>
 
                     </div>
