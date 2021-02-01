@@ -47,6 +47,9 @@ const useStyles = makeStyles(() =>
         // marginTop: '-12%'
         marginTop: '20px'
     },
+    titles: {
+        textTransform: 'uppercase'
+    }
   }),
 );
 
@@ -125,7 +128,7 @@ export default function Landing() {
                         <h1 className="cssanimation sequence leRotateSkateInLeft">welcome</h1>
                     </section>
                     
-                    <section>
+                    <section className={classes.titles}>
                         <h1>full stack developer  · collaborator  · innovator  · learner</h1>
                     </section>
                     <section 
