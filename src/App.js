@@ -6,7 +6,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import ResumePage from './pages/ResumePage';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import Navbar from './components/Navbar/Navbar';
 
 
 
@@ -14,7 +14,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Appbar/>
+        <Navbar/>
+        {/* <Appbar/> */}
         <Switch>
           <Route exact path = '/'>
             <LandingPage/>
