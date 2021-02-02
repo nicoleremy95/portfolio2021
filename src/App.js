@@ -6,6 +6,7 @@ import ResumePage from './pages/ResumePage';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop/>
         <Navbar/>
         <Switch>
           <Route exact path = '/'>
