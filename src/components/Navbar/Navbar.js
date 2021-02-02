@@ -173,9 +173,16 @@ export default function PrimarySearchAppBar() {
                 </Link>
             </Tooltip>
           </IconButton>
-          <Typography className={classes.title} noWrap>
-            <h1>Nicole Remy</h1>
-          </Typography>
+          
+            <Link
+              className={classes.appBarLinkBlack}
+              to="/"
+            >
+              <Typography className={classes.title} noWrap>
+              <h1>Nicole Remy</h1>
+              </Typography>
+
+            </Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="black">
@@ -184,7 +191,8 @@ export default function PrimarySearchAppBar() {
                         to="/about-me"
                         className={classes.appBarLinkBlack}
                     >
-                        <AccountCircleIcon/>
+                        {/* <AccountCircleIcon/> */}
+                        <h3>about me /</h3>
                     </Link>
                 </Tooltip>
             </IconButton>
@@ -194,7 +202,8 @@ export default function PrimarySearchAppBar() {
                         to="/projects"
                         className={classes.appBarLinkBlack}
                     >
-                        <DevicesIcon/>
+                        {/* <DevicesIcon/> */}
+                        <h3>projects /</h3>
                     </Link>
                 </Tooltip>
             </IconButton>
@@ -208,7 +217,8 @@ export default function PrimarySearchAppBar() {
                         to="/resume"
                         className={classes.appBarLinkBlack}
                     >
-                        <ReceiptIcon/>
+                        {/* <ReceiptIcon/> */}
+                        <h3>resume </h3>
                     </Link>
                 </Tooltip>
             </IconButton>

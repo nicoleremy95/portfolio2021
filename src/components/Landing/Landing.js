@@ -145,9 +145,9 @@ export default function Landing() {
                         </h3>
                     </section> 
                     <section className={classes.links}>
+                        <LargeLinksInternal to='/about-me' text="AboutMe"/>
+                        <LargeLinksInternal to='/projects' text="Projects"/>
                         <LargeLinksInternal to='/resume' text="Resume"/>
-                        <LargeLinksInternal to='/projects' text="Projects"/> 
-                        <LargeLinksInternal to='/about-me' text="AboutMe"/> 
                     </section>
                     {/* <section 
                         className={classes.buttonContainer}

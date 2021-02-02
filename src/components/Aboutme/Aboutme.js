@@ -14,6 +14,9 @@ import antDesignOutlined from '@iconify-icons/ant-design/ant-design-outlined';
 import handlebarsIcon from '@iconify-icons/logos/handlebars';
 import materializecssIcon from '@iconify-icons/logos/materializecss';
 import bxlJquery from '@iconify-icons/bx/bxl-jquery';
+import materialUi from '@iconify-icons/simple-icons/material-ui';
+import behanceOutlined from '@iconify-icons/ant-design/behance-outlined';
+
 //Brands Style : fab
 import { 
     faJs, 
@@ -83,6 +86,11 @@ const useStyles = makeStyles((theme) =>
         textDecoration: "none",
         color: "white !important",
     },
+    linkWhiteUp: {
+        textDecoration: "none",
+        color: "white !important",
+        // bottom: -20
+    },
     icon: {
         fontSize: '15pt',
     },
@@ -103,25 +111,13 @@ const useStyles = makeStyles((theme) =>
     },
     bio: {
         textAlign: 'justify'
+    },
+    iconHover: {
+        transform: "scale(1.1)"
     }
   }),
 );
 
-const skills =[
-    <FontAwesomeIcon icon={faCss3} size="3x"/>,
-    <FontAwesomeIcon icon={faHtml5} size="3x" />,
-    <FontAwesomeIcon icon={faJs} size="3x"/>,
-    <FontAwesomeIcon icon={faReact} size="3x" />,
-    <FontAwesomeIcon icon={faNode} size="3x" />,
-    <FontAwesomeIcon icon={faNpm} size="3x"/>,
-    <Icon className="Portfolio-tech-icons" icon={antDesignOutlined}  height="30"/>,
-    <Icon className="Portfolio-tech-icons" icon={mongodbIcon}  height="30"/>,
-    <Icon icon={materializecssIcon}  height="30"/>,
-    <Icon icon={mysqlIcon}  height="30"/>,
-    <Icon icon={handlebarsIcon}  width="30"/>,
-    <Icon className="Portfolio-tech-icons" icon={bxlJquery}  height="30"/>,
-    <FontAwesomeIcon icon={faBootstrap} size="3x" /> ,
-]
 
 export default function Aboutme() {
     const classes = useStyles();
@@ -135,20 +131,32 @@ export default function Aboutme() {
                     </section>
                     <section >
                         <div className={classes.borderOdd}>
-                            <h1 className={classes.title}>contact</h1>
+                            {/* <h1 className={classes.title}>contact</h1> */}
                             
                             
                             <Tooltip title="view GitHub">
-                                        <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
+                                <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
                             </Tooltip>
                             <span className={classes.divider}>/</span>
-
                             <Tooltip title="view Linkedin">
-                                        <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><LinkedInIcon className={classes.icon}/><span className={classes.linkText}>Linkedin</span></a>
+                                <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><LinkedInIcon className={classes.icon}/><span className={classes.linkText}>Linkedin</span></a>
                             </Tooltip>
+                            <span className={classes.divider}>/</span>
+                            
+                            <Tooltip title="view Behance">
+                                <a className={classes.linkWhite} target="blank" href="https://www.behance.net/nremyc81a">
+                                    {/* <div className={classes.linkWhiteUp}> */}
+                                        {/* <Icon className={classes.icon} icon={behanceOutlined} height="30"/> */}
+                                        
+                                    {/* </div> */}
+                                    <span className={classes.linkText}> behance </span>
+                                </a>
+                            </Tooltip>
+                            
+                            
                             <span className={classes.divider}>/</span>
                             <Tooltip title="email me">
-                                        <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
+                                <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
                             </Tooltip>
             
                         </div>
@@ -170,21 +178,84 @@ export default function Aboutme() {
                         <div className={classes.borderEven}>
                             <h1 className={classes.title}>Skills</h1>
                             <div className={classes.techBox}>
-                                <FontAwesomeIcon   icon={faCss3} size="2x"/>
-                                <FontAwesomeIcon  icon={faHtml5} size="2x" />
-                                <FontAwesomeIcon  icon={faJs} size="2x"/>
-                                <FontAwesomeIcon  icon={faReact} size="2x" />
-                                <FontAwesomeIcon  icon={faNode} size="2x" />
-                                <FontAwesomeIcon  icon={faNpm} size="2x"/>
+                                <Tooltip title="Material UI" >
+                                    <a>
+                                        <Icon   icon={materialUi}  height="30"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="Github" >
+                                    <a>
+                                        <GitHubIcon/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="HTML5" >
+                                    <a>
+                                        <FontAwesomeIcon  icon={faHtml5} size="2x" />
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="Javascript" >
+                                    <a>
+                                        <FontAwesomeIcon  icon={faJs} size="2x"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="React" >
+                                    <a>
+                                        <FontAwesomeIcon  icon={faReact} size="2x" />
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="Node" >
+                                    <a>
+                                        <FontAwesomeIcon  icon={faNode} size="2x" />
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="CSS" >
+                                    <a>
+                                        <FontAwesomeIcon icon={faCss3} size="2x"/>
+                                    </a>
+                                </Tooltip>
+                                
                             </div>
                             <div className={classes.techBox}>
-                            <FontAwesomeIcon  icon={faBootstrap} size="2x" /> 
-                                <Icon   icon={antDesignOutlined}  height="30"/>
-                                <Icon   icon={mongodbIcon}  height="30"/>
-                                <Icon   con={materializecssIcon}  height="30"/>
-                                <Icon  icon={mysqlIcon}  height="30"/>
-                                <Icon  icon={handlebarsIcon}  width="30"/>
-                                <Icon   icon={bxlJquery}  height="30"/>
+                                <Tooltip title="npm">
+                                        <a>
+                                            <FontAwesomeIcon  icon={faNpm} size="2x" />
+                                        </a>
+                                </Tooltip>
+                                <Tooltip title="Bootstrap" >
+                                    <a>
+                                        <FontAwesomeIcon  icon={faBootstrap} size="2x" />
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="Ant Design" >
+                                    <a>
+                                        <Icon   icon={antDesignOutlined}  height="30"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="MongoDB" >
+                                    <a>
+                                        <Icon   icon={mongodbIcon}  height="30"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="Materialize" >
+                                    <a>
+                                        <Icon   icon={materializecssIcon}  height="30"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="MySQL" >
+                                    <a>
+                                        <Icon   icon={mysqlIcon}  height="30"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="Handlebars" >
+                                    <a>
+                                        <Icon   icon={handlebarsIcon}  height="15"/>
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title="JQuery" >
+                                    <a>
+                                        <Icon   icon={bxlJquery}  height="30"/>
+                                    </a>
+                                </Tooltip>
                             </div>
                         </div>
                     </section>

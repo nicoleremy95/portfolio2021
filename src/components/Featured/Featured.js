@@ -8,11 +8,13 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import DevicesIcon from '@material-ui/icons/Devices';
 import LargeLinksExternal from '../LargeLinksExternal/LargeLinksExternal';
 import { Container } from '@material-ui/core';
+import planitThumbnail from '../../images/planitThumbnail.png'
+import pawslifeThumbnail from '../../images/pawslifeThumbnail.png'
 
 const featuredArr =[
   {
     name: "PLANiT",
-      // img: planitImg,
+    img: planitThumbnail,
     featured: true,
     tech: [
       // <FontAwesomeIcon icon={faCss3} size="2x"/> ,
@@ -38,7 +40,7 @@ const featuredArr =[
    } ,
    {
     name: "PawsLife",
-    //  img: pawsLifeImg,
+     img: pawslifeThumbnail,
      featured: true,
     tech: [
     //  <FontAwesomeIcon icon={faCss3} size="2x"/> ,
@@ -94,7 +96,15 @@ const useStyles = makeStyles((Theme) =>
     logo: {
       paddingTop: '20px',
       marginBottom: '20px'
-    }
+    },
+    image: {
+      // maxHeight:"10vw",
+      maxWidth:"9vw"
+    },
+    // imageContainer: {
+    //   top: 100,
+
+    // }
   }),
 );
 
@@ -111,11 +121,12 @@ export default function Featured(item) {
               {featuredArr.map((item, i) => (
                 <div className={classes.carouselContent}>
                   <div className={classes.appTitle}>
-                    <h1>{item.name}</h1>
+                    <h1>{item.name} <span className={classes.imageContainer}><img className={classes.image} src={item.img}/></span></h1>
                   </div> 
                   <div className={classes.links}>
+                  
                     <LargeLinksExternal to={item.app} text="View App"/>  
-
+                    
                   </div>
                   
                     {item.githubFront && item.githubBack? 

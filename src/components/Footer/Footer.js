@@ -5,6 +5,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Tooltip from '@material-ui/core/Tooltip';
 import {Container}from '@material-ui/core/';
+import behanceOutlined from '@iconify-icons/ant-design/behance-outlined';
+import { Icon} from '@iconify/react';
 
 
 const useStyles = makeStyles((theme) =>
@@ -44,6 +46,15 @@ const useStyles = makeStyles((theme) =>
         "-webkit-background-clip": "text",
         "-webkit-text-fill-color": "transparent",
     },
+    linkTextUp: {
+        bottom: "20px",
+        fontSize: '15pt',
+        marginLeft: '10px',
+        textTransform: 'uppercase',
+        background: "-webkit-linear-gradient(var(--thirdColor), var(--secondaryColor))",
+        "-webkit-background-clip": "text",
+        "-webkit-text-fill-color": "transparent",
+    },
     divider: {
         background: "-webkit-linear-gradient(var(--fourthColor), var(--thirdColor))",
         "-webkit-background-clip": "text",
@@ -76,7 +87,16 @@ export default function Footer() {
                                 <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
                         </Tooltip>
                 </div>
-            
+                {/* <div className={classes.root}>
+                        <Tooltip title="bahance">
+                                <a className={classes.linkWhite} target="blank" href="https://www.behance.net/nremyc81a"><Icon className={classes.icon} icon={behanceOutlined} height="30"/><span className={classes.linkTextUp}> behance </span></a>
+                        </Tooltip>
+                        <span className={classes.divider}>/</span>
+                        <Tooltip title="email me">
+                                <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
+                        </Tooltip>
+                </div>
+             */}
             </Container>
             
         </div>
