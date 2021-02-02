@@ -23,6 +23,8 @@ const useStyles = makeStyles((Theme) =>
         borderColor: 'white',
         padding: '15px',
         marginBottom: '40px',
+        backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
+
         // paddingTop: '-20px'
     },
     linkWhite: {

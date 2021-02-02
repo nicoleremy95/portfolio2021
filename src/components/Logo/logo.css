@@ -1,13 +1,23 @@
-
+.logo {
+    /* display: flex;
+   flex-direction: column; */
+   /* min-height: 100vh; */
+}
 .featured {
     font-size: 50px;
+    flex: 1;
     text-transform: uppercase;
     display: inline;
+    /* margin-top: -200px; */
+    /* position: relative; */
+
 }
 .arrow {
     z-index:-1;
     width: 0; 
     height: 0; 
+    bottom: 0;
+    flex: 0;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 30px solid white;
@@ -21,13 +31,36 @@
   
 @keyframes pulse {
     0% {
-        background-color: #d9ecf2;
+        background-color: var(--mainColor);
     }
     100% {
-        background-color: #f56a79;
+        background-color:var(--secondaryColor);
     }
 }
 
 .disappear{
     display: none;
+}
+
+
+
+.welcome-container {
+    font-size: 7vw;
+    text-transform: uppercase;
+    margin-bottom: -8%;
+}
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.leRotateSkateInLeft span { animation-name: leRotateSkateInLeft }
+@keyframes leRotateSkateInLeft {
+    from {
+        transform: scaleX(0.2) translateX(-100px);
+        opacity: 0;
+    }
 }

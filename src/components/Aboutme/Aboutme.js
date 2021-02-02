@@ -64,6 +64,8 @@ const useStyles = makeStyles((theme) =>
         letterSpacing: "2px",
         textTransform: 'uppercase',
         fontSize: '4vh !important',
+        // "-webkit-text-stroke": ".25px gray",
+        // "-webkit-text-fill-color": "white",
     },
     p: {
         fontSize: '3vh !important',

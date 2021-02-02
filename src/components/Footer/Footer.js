@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) =>
     footerContainer: {
         // backgroundColor:'pink',
         // marginTop: '20px'
+        // backgroundColor: "#1a005e",
+        // backgroundImage: "linear-gradient(315deg, rgba(230, 164, 144, 0), rgba(230, 164, 144, 0.2))",
     },
     root: {
         display: 'flex',

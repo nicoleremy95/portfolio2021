@@ -36,3 +36,16 @@ p {
 a {
   font-family: 'Jura', sans-serif;
 }
+
+/* :root {
+  --mainColor: #312c51;
+  --secondaryColor: #48426d;
+  --thirdColor: #f0c38e;
+  --fourthColor: #f1aa9b;
+} */
+:root {
+  --mainColor: #d9ecf2;
+  --secondaryColor: #f56a79;
+  --thirdColor: #ff414d;
+  --fourthColor: #1aa6b7;
+}

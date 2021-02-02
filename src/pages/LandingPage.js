@@ -9,8 +9,9 @@ import './landing.css';
 const useStyles = makeStyles(()=>
     createStyles({
         landingContainer: {
-            backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
-            paddingBottom: '50px'
+            backgroundColor: "var(--mainColor)",
+            backgroundImage: "linear-gradient(315deg, rgba(230, 164, 144, 0), rgba(230, 164, 144, 0.2))",
+            paddingBottom: '50px',
         },
        
         

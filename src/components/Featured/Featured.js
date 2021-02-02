@@ -71,7 +71,9 @@ const useStyles = makeStyles((Theme) =>
   createStyles({
     root: {
       // backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
-      backgroundColor: '#d9ecf2',
+      // backgroundColor: '#d9ecf2',
+      backgroundColor: "#d9ecf2",
+      backgroundImage: "linear-gradient(315deg, rgba(230, 164, 144, 0), rgba(230, 164, 144, 0.2))",
       padding: '1vh'
     },
     appTitle: {
@@ -87,7 +89,7 @@ const useStyles = makeStyles((Theme) =>
       fontSize: "7vw",
     },
     carouselContent: {
-      marginTop: '20vh'
+      marginTop: '10vh'
     },
     links: {
       marginTop: '-12%'

@@ -7,7 +7,9 @@ import Portfolio from '../components/Portfolio/Portfolio';
 const useStyles = makeStyles(()=>
     createStyles({
         projectContainer: {
-            backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
+            // backgroundColor: "#FFFAF1",
+
+            // backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
         },
     })
 )
