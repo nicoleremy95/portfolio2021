@@ -21,9 +21,9 @@ const useStyles = makeStyles((Theme) =>
         borderStyle: 'solid',
         borderWidth: '20',
         borderColor: 'white',
-        padding: '15px',
+        padding: '40px',
         marginBottom: '40px',
-        backgroundImage: "linear-gradient(to bottom right, var(--fourthColor ), var(--mainColor));",  
+        backgroundImage: "linear-gradient(to bottom right, var(--fourthColor ), var(--secondaryColor));",  
 
         // paddingTop: '-20px'
     },
