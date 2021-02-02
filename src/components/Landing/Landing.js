@@ -1,11 +1,8 @@
 import React from 'react';
 import { createStyles, makeStyles} from '@material-ui/core/styles';
-import {Grid, Container, Box}from '@material-ui/core/';
-import Emoji from '../Emoji/Emoji';
-import Buttons from '../Buttons/Buttons';
+import {Container}from '@material-ui/core/';
 import Logo from '../Logo/Logo';
 import headshot from '../../images/headshot.jpg';
-import LargeLinks from '../LargeLinks/LargeLinks';
 import LargeLinksInternal from '../LargeLinksInternal/LargeLinksInternal';
 import './landing.css'
 

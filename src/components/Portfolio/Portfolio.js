@@ -34,11 +34,6 @@ import employeeProfilesImg from "../../images/employeeProfilesImg.png";
 import passwordGeneratorImg from "../../images/passwordGenerator.png";
 import codingAssesmentImg from "../../images/codingAssesment.png";
 import bxlJquery from '@iconify-icons/bx/bxl-jquery';
-import { Container } from '@material-ui/core';
-
-
-
-
 
 
 const useStyles = makeStyles((Theme) =>

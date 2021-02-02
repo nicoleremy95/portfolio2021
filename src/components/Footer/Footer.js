@@ -4,7 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Tooltip from '@material-ui/core/Tooltip';
-import {Grid, Container, Typography}from '@material-ui/core/';
+import {Container}from '@material-ui/core/';
 
 
 const useStyles = makeStyles((theme) =>

@@ -1,9 +1,7 @@
-import { RotateLeft } from '@material-ui/icons'
 import React from 'react';
 import {Container, Grid} from '@material-ui/core/';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles} from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
-import {Link} from 'react-router-dom';
 import LargeLinksWhite from '../LargeLinksWhite/LargeLinksWhite';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DevicesIcon from '@material-ui/icons/Devices';

@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStyles, makeStyles} from '@material-ui/core/styles';
-import {Grid, Container, Typography}from '@material-ui/core/';
+import {Container}from '@material-ui/core/';
 import Logo from '../Logo/Logo';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon} from '@iconify/react';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

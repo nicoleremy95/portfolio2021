@@ -1,7 +1,5 @@
 import React from 'react';
 import { createStyles, makeStyles} from '@material-ui/core/styles';
-import {Button} from '@material-ui/core/';
-import { Link } from 'react-router-dom';
 import CallMadeIcon from '@material-ui/icons/CallMade';
 
 
