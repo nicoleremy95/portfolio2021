@@ -20,18 +20,22 @@ const useStyles = makeStyles(()=>
             fontSize: "7vw",
         },
         buttonText: {
-            color: "white !important",
+            color: "var(--thirdColor) !important",
+            // color: "white !important",
             letterSpacing: "2px",
             textTransform: 'uppercase',
             fontSize: '6vw !important',
-            textDecoration: 'underline',
+            // textDecoration: 'underline',
             marginTop: '-20px',
             marginBottom: '1vh',
+            "&:hover":{
+                background:"linear-gradient(to right,var(--fourthColor) 0%,var(--fourthColor) 5px,transparent)",
+            }
 
         }
     })
 )
-export default function Buttons(props) {
+export default function LargeLinksExternal(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>

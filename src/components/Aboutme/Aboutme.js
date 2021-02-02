@@ -3,11 +3,9 @@ import {createStyles, makeStyles} from '@material-ui/core/styles';
 import {Grid, Container, Typography}from '@material-ui/core/';
 import Logo from '../Logo/Logo';
 import { Icon, InlineIcon } from '@iconify/react';
-
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import Tooltip from '@material-ui/core/Tooltip';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import mongodbIcon from '@iconify-icons/simple-icons/mongodb';
@@ -47,19 +45,30 @@ const useStyles = makeStyles((theme) =>
     sections: {
         // marginBottom: '600px',
     },
-    border: {
+    borderOdd: {
         marginBottom: "3vh",
         borderStyle: 'solid',
         borderWidth: '20',
         borderColor: 'white',
-        padding: "10px"
+        padding: "10px",
+        backgroundImage: "linear-gradient(to bottom right, var(--fourthColor ), var(--mainColor));",  
+
+    },
+    borderEven: {
+        marginBottom: "3vh",
+        borderStyle: 'solid',
+        borderWidth: '20',
+        borderColor: 'white',
+        padding: "10px",
+        backgroundImage: "linear-gradient(to bottom right, var(--thirdColor ), var(--mainColor));",  
+
     },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    year: {
+    title: {
         color: "white !important",
         letterSpacing: "2px",
         textTransform: 'uppercase',
@@ -125,8 +134,8 @@ export default function Aboutme() {
                         <Logo title="about me" />
                     </section>
                     <section >
-                        <div className={classes.border}>
-                            <h1 className={classes.year}>contact</h1>
+                        <div className={classes.borderOdd}>
+                            <h1 className={classes.title}>contact</h1>
                             
                             
                             <Tooltip title="view GitHub">
@@ -145,21 +154,21 @@ export default function Aboutme() {
                         </div>
                     </section>
                     <section>
-                        <div className={classes.border}>
-                            <h1 className={classes.year}>Bio</h1>
+                        <div className={classes.borderEven}>
+                            <h1 className={classes.title}>Bio</h1>
                             <h3 className={classes.bio}>Full Stack Web Developer with a background in Architecture, Geographic Information Science, and customer service. Self-motivated with a strong work ethic and a passion for problem solving, innovating, and learning. Experience working/communicating with stakeholders and collaborating in teams. Committed to leadership, thinking out of the box, and acquiring new skills. 
                             </h3>
                         </div>
                     </section>  
                     <section className={classes.sections}>
-                        <div className={classes.border}>
-                            <h1 className={classes.year}>Education</h1>
-                            {/* <h3 className={classes.year}>2018</h3>    */}
+                        <div className={classes.borderOdd}>
+                            <h1 className={classes.title}>Education</h1>
+                            {/* <h3 className={classes.title}>2018</h3>    */}
                             <h3 className={classes.p}>2018  · <span><a href="https://www.usc.edu/" target="blank">University of Southern California</a></span>  · B.S. in <span><a href="https://spatial.usc.edu/undergraduate/b-s-in-geodesign/" target="blank">GeoDesign</a></span>  ·  3.61 GPA</h3>
                             <h3 className={classes.p}> 2020  ·  <span><a href="https://www.washington.edu/" target="blank">University of Washington </a></span>  ·  Certificate in <span><a href="https://bootcamp.uw.edu/" target="blank">Full Stack Web Development</a></span>  ·  4.00 GPA</h3>
                         </div>
-                        <div className={classes.border}>
-                            <h1 className={classes.year}>Skills</h1>
+                        <div className={classes.borderEven}>
+                            <h1 className={classes.title}>Skills</h1>
                             <div className={classes.techBox}>
                                 <FontAwesomeIcon   icon={faCss3} size="1x"/>
                                 <FontAwesomeIcon  icon={faHtml5} size="1x" />

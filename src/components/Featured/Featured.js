@@ -1,13 +1,12 @@
 import React from 'react'
 import Carousel from 'react-material-ui-carousel';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import Buttons from '../Buttons/Buttons';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Logo from '../Logo/Logo';
 import Tooltip from '@material-ui/core/Tooltip';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DevicesIcon from '@material-ui/icons/Devices';
-import LargeLinks from '../LargeLinks/LargeLinks';
+import LargeLinksExternal from '../LargeLinksExternal/LargeLinksExternal';
 import { Container } from '@material-ui/core';
 
 const featuredArr =[
@@ -72,7 +71,7 @@ const useStyles = makeStyles((Theme) =>
     root: {
       // backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
       // backgroundColor: '#d9ecf2',
-      backgroundColor: "#d9ecf2",
+      backgroundColor: "var(--mainColor)",
       backgroundImage: "linear-gradient(315deg, rgba(230, 164, 144, 0), rgba(230, 164, 144, 0.2))",
       padding: '1vh'
     },
@@ -81,7 +80,7 @@ const useStyles = makeStyles((Theme) =>
       textTransform: 'uppercase'
     },
     featured: {
-      background: "-webkit-linear-gradient(#ff414d, #1aa6b7)",
+      background: "-webkit-linear-gradient(var(--thirdColor), var(--fourthColor))",
       "-webkit-background-clip": "text",
       "-webkit-text-fill-color": "transparent",
       textTransform: 'uppercase',
@@ -113,23 +112,23 @@ export default function Featured(item) {
                     <h1>{item.name}</h1>
                   </div> 
                   <div className={classes.links}>
-                    <LargeLinks to={item.app} text="View App"/>  
+                    <LargeLinksExternal to={item.app} text="View App"/>  
 
                   </div>
                   
                     {item.githubFront && item.githubBack? 
                             <div>
                                 <Tooltip title="view GitHub Views">
-                                  <LargeLinks to={item.githubFront} text="GitHub Views"/>  
+                                  <LargeLinksExternal to={item.githubFront} text="GitHub Views"/>  
                                 </Tooltip>
                                 <Tooltip title="view GitHub API">
-                                  <LargeLinks to={item.githubBack} text="GitHub API"/>  
+                                  <LargeLinksExternal to={item.githubBack} text="GitHub API"/>  
                                 </Tooltip>
                             </div>
                             : 
                             <div>
                                 <Tooltip title="view GitHub">
-                                <LargeLinks to={item.github} text="GitHub"/>  
+                                <LargeLinksExternal to={item.github} text="GitHub"/>  
                                 </Tooltip>
                             </div>
                         }

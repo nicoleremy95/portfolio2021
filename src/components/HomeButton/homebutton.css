@@ -1,11 +1,38 @@
 
-.home-button {
+/* .home-button {
     z-index:-1;
     width: 0; 
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 20px solid #f56a79;
-    border-right: 20px solid #f56a79;
+    border-left: 20px solid var(--secondaryColor);
+    border-right: 20px solid var(--secondaryColor);
+} */
+
+.home-button-left {
+    z-index:-1;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid var(--thirdColor);
+    /* border-right: 20px solid var(--secondaryColor); */
     /* transform: rotate(90); */
+    position:relative; 
+    left:-10px; 
+    bottom: -20px;
+  
+}
+.home-button-right {
+    z-index:-1;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    /* border-left: 20px solid var(--secondaryColor); */
+    border-right: 20px solid var(--fourthColor);
+    /* transform: rotate(90); */
+    position:relative; 
+    right: -10px;
+    top:-20px
 }

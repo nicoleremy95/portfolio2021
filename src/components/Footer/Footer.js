@@ -24,34 +24,29 @@ const useStyles = makeStyles((theme) =>
     },
     linkWhite: {
         textDecoration: "none",
-        color: "white !important",
         // fontSize: '4vh'
     },
     icon: {
         fontSize: '100%',
-        color: '#1aa6b7',
+        color: 'var(--thirdColor)',
         // marginLeft: '1%'
     },
     linkText: {
         fontSize: '100%',
         textTransform: 'uppercase',
-        background: "-webkit-linear-gradient(#1aa6b7, #ff414d)",
+        background: "-webkit-linear-gradient(var(--thirdColor), var(--secondaryColor))",
         "-webkit-background-clip": "text",
         "-webkit-text-fill-color": "transparent",
 
     },
     divider: {
-        // color: "white ",
-        background: "-webkit-linear-gradient(#1aa6b7, #ff414d)",
+        background: "-webkit-linear-gradient(var(--fourthColor), var(--thirdColor))",
         "-webkit-background-clip": "text",
         "-webkit-text-fill-color": "transparent",
         margin: '10px',
         fontSize: '20px'
 
     },
-    title: {
-        // margin: '20px'
-    }
   }),
 );
 

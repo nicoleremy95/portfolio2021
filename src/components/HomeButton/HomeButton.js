@@ -3,8 +3,17 @@ import './homebutton.css';
 
 export default function HomeButton() {
     return (
-        <div className="home-button">
+        <div>
+<div className="home-button-left">
             
+            </div>
+            <div className="home-button-right">
+                
+            </div>
         </div>
+        
+        // <div className="home-button">
+            
+        // </div>
     )
 }

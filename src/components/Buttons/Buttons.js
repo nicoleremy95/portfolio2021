@@ -29,7 +29,7 @@ const useStyles = makeStyles(()=>
             padding: '15px',
             display: 'inline-block',
             '&:hover': {
-                backgroundImage: 'linear-gradient(to bottom right, #f56a79,  #1aa6b7)',
+                backgroundImage: 'linear-gradient(to bottom right, var(--secondaryColor),  var(--fourthColor))',
             },
            
         },

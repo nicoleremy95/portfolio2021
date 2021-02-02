@@ -37,15 +37,77 @@ a {
   font-family: 'Jura', sans-serif;
 }
 
+/* PURPLE AND BEIGE */
+/* :root {
+  --mainColor: #312c51;
+  --secondaryColor: #f0c38e;
+  --thirdColor:  #48426d;
+  --fourthColor: #f1aa9b;
+} */
 /* :root {
   --mainColor: #312c51;
   --secondaryColor: #48426d;
   --thirdColor: #f0c38e;
   --fourthColor: #f1aa9b;
 } */
-:root {
+/* :root {
+  --mainColor: #312c51;
+  --secondaryColor:  #f1aa9b;
+  --thirdColor: #f0c38e;
+  --fourthColor:#48426d ;
+} */
+/* favorite */
+/* :root {
+  --mainColor:  #f0c38e;
+  --secondaryColor: #48426d ;
+  --thirdColor:  #C74468;
+  --fourthColor:   #f1aa9b;
+} */
+/* :root {
+  --mainColor:  #f0c38e;
+  --secondaryColor: #f1aa9b ;
+  --thirdColor: #312c51;
+  --fourthColor:  #48426d;
+} */
+
+/* PINK AND BLUE */
+/* :root {
   --mainColor: #d9ecf2;
   --secondaryColor: #f56a79;
   --thirdColor: #ff414d;
   --fourthColor: #1aa6b7;
+}
+:root {
+  --mainColor:  #f56a79;
+  --secondaryColor: #d9ecf2;
+  --thirdColor: #ff414d;
+  --fourthColor: #1aa6b7;
+}
+:root {
+  --mainColor:  #1aa6b7;
+  --secondaryColor: #f56a79;
+  --thirdColor: #ff414d;
+  --fourthColor: #d9ecf2;
+}
+:root {
+  --mainColor:  #ff414d;
+  --secondaryColor: #f56a79;
+  --thirdColor: #d9ecf2;
+  --fourthColor: #1aa6b7;
+} */
+
+/* EXAMPLE */
+/* :root {
+  --mainColor: #E3A490;
+  --secondaryColor: #3C1E67;
+  --thirdColor: #C74468;
+  --fourthColor: #D8B4BF;
+} */
+
+/* TERRA COTTA */
+:root {
+  --mainColor: #F0EDE6;
+  --secondaryColor: #C58A6A;
+  --thirdColor: #8C4B2F;
+  --fourthColor: #C86734;
 }

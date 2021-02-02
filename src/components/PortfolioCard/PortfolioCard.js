@@ -4,7 +4,7 @@ import {Container, Grid} from '@material-ui/core/';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import {Link} from 'react-router-dom';
-import LargeLinks from '../LargeLinks/LargeLinks';
+import LargeLinksWhite from '../LargeLinksWhite/LargeLinksWhite';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DevicesIcon from '@material-ui/icons/Devices';
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles((Theme) =>
         borderColor: 'white',
         padding: '15px',
         marginBottom: '40px',
-        backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
+        backgroundImage: "linear-gradient(to bottom right, var(--fourthColor ), var(--mainColor));",  
 
         // paddingTop: '-20px'
     },
@@ -100,7 +100,7 @@ export default function PortfolioCard(props) {
                         // item xs={10} 
                         className={classes.projectOutline}
                     >
-                        <LargeLinks to={props.app} text={props.name}/>
+                        <LargeLinksWhite to={props.app} text={props.name}/>
 
                         <div justifyContent="center"><img className={classes.image} src={props.img} alt={props.name}/></div>
                         <div className={classes.text}><h3 >{props.description}</h3></div>
