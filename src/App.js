@@ -1,5 +1,4 @@
 import './App.css';
-import Appbar from './components/Appbar/Appbar';
 import LandingPage from './pages/LandingPage';
 import AboutmePage from './pages/AboutmePage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -15,7 +14,6 @@ function App() {
     <div className="App">
       <Router>
         <Navbar/>
-        {/* <Appbar/> */}
         <Switch>
           <Route exact path = '/'>
             <LandingPage/>
