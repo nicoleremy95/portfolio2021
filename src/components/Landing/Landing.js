@@ -27,7 +27,7 @@ const useStyles = makeStyles(() =>
     },
     logo: {
         paddingTop: '20px',
-        marginBottom: '150px',
+        // marginBottom: '150px',
     },
     buttonContainer: {
         marginBottom: '60px',
@@ -45,7 +45,11 @@ const useStyles = makeStyles(() =>
         marginTop: '20px'
     },
     titles: {
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        // fontSize: '4vw'
+        background: "-webkit-linear-gradient(var(--thirdColor), var(--secondaryColor))",
+        "-webkit-background-clip": "text",
+        "-webkit-text-fill-color": "transparent",
     }
   }),
 );
@@ -119,14 +123,17 @@ export default function Landing() {
                     <section 
                         className={classes.logo}
                     >
-                        <Logo title="nicole remy"/>
+                        <section className="welcome-container">
+                            <h1 className="cssanimation sequence leRotateSkateInLeft">nicole remy</h1>
+                        </section>
+                        {/* <Logo title="nicole remy"/> */}
                     </section>
-                    <section className="welcome-container">
+                    {/* <section className="welcome-container">
                         <h1 className="cssanimation sequence leRotateSkateInLeft">welcome</h1>
-                    </section>
+                    </section> */}
                     
                     <section className={classes.titles}>
-                        <h1>full stack developer  · collaborator  · innovator  · learner</h1>
+                        <h1>full stack developer  · collaborator  · innovator  · active learner</h1>
                     </section>
                     <section 
                         className={classes.textContainer}
