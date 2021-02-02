@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) =>
     techBox: {
         marginTop: '20px',
         marginBottom: '20px',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         display: 'flex',
         direction: 'row'
     },
@@ -108,19 +108,19 @@ const useStyles = makeStyles((theme) =>
 );
 
 const skills =[
-    <FontAwesomeIcon icon={faCss3} size="2x"/>,
-    <FontAwesomeIcon icon={faHtml5} size="2x" />,
-    <FontAwesomeIcon icon={faJs} size="2x"/>,
-    <FontAwesomeIcon icon={faReact} size="2x" />,
-    <FontAwesomeIcon icon={faNode} size="2x" />,
-    <FontAwesomeIcon icon={faNpm} size="2x"/>,
+    <FontAwesomeIcon icon={faCss3} size="3x"/>,
+    <FontAwesomeIcon icon={faHtml5} size="3x" />,
+    <FontAwesomeIcon icon={faJs} size="3x"/>,
+    <FontAwesomeIcon icon={faReact} size="3x" />,
+    <FontAwesomeIcon icon={faNode} size="3x" />,
+    <FontAwesomeIcon icon={faNpm} size="3x"/>,
     <Icon className="Portfolio-tech-icons" icon={antDesignOutlined}  height="30"/>,
     <Icon className="Portfolio-tech-icons" icon={mongodbIcon}  height="30"/>,
     <Icon icon={materializecssIcon}  height="30"/>,
     <Icon icon={mysqlIcon}  height="30"/>,
     <Icon icon={handlebarsIcon}  width="30"/>,
     <Icon className="Portfolio-tech-icons" icon={bxlJquery}  height="30"/>,
-    <FontAwesomeIcon icon={faBootstrap} size="2x" /> ,
+    <FontAwesomeIcon icon={faBootstrap} size="3x" /> ,
 ]
 
 export default function Aboutme() {
@@ -170,19 +170,21 @@ export default function Aboutme() {
                         <div className={classes.borderEven}>
                             <h1 className={classes.title}>Skills</h1>
                             <div className={classes.techBox}>
-                                <FontAwesomeIcon   icon={faCss3} size="1x"/>
-                                <FontAwesomeIcon  icon={faHtml5} size="1x" />
-                                <FontAwesomeIcon  icon={faJs} size="1x"/>
-                                <FontAwesomeIcon  icon={faReact} size="1x" />
-                                <FontAwesomeIcon  icon={faNode} size="1x" />
-                                <FontAwesomeIcon  icon={faNpm} size="1x"/>
-                                <Icon   icon={antDesignOutlined}  height="20"/>
-                                <Icon   icon={mongodbIcon}  height="20"/>
-                                <Icon   con={materializecssIcon}  height="20"/>
-                                <Icon  icon={mysqlIcon}  height="20"/>
-                                <Icon  icon={handlebarsIcon}  width="20"/>
-                                <Icon   icon={bxlJquery}  height="20"/>
-                                <FontAwesomeIcon  icon={faBootstrap} size="1x" /> 
+                                <FontAwesomeIcon   icon={faCss3} size="2x"/>
+                                <FontAwesomeIcon  icon={faHtml5} size="2x" />
+                                <FontAwesomeIcon  icon={faJs} size="2x"/>
+                                <FontAwesomeIcon  icon={faReact} size="2x" />
+                                <FontAwesomeIcon  icon={faNode} size="2x" />
+                                <FontAwesomeIcon  icon={faNpm} size="2x"/>
+                            </div>
+                            <div className={classes.techBox}>
+                            <FontAwesomeIcon  icon={faBootstrap} size="2x" /> 
+                                <Icon   icon={antDesignOutlined}  height="30"/>
+                                <Icon   icon={mongodbIcon}  height="30"/>
+                                <Icon   con={materializecssIcon}  height="30"/>
+                                <Icon  icon={mysqlIcon}  height="30"/>
+                                <Icon  icon={handlebarsIcon}  width="30"/>
+                                <Icon   icon={bxlJquery}  height="30"/>
                             </div>
                         </div>
                     </section>

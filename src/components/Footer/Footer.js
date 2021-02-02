@@ -18,26 +18,31 @@ const useStyles = makeStyles((theme) =>
     root: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         marginTop: '50px',
-        marginBottom: '50px'
+        direction: 'row'
+    },
+    root2: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: '50px',
+        direction: 'row'
     },
     linkWhite: {
         textDecoration: "none",
-        // fontSize: '4vh'
     },
     icon: {
         fontSize: '100%',
         color: 'var(--thirdColor)',
-        // marginLeft: '1%'
     },
     linkText: {
-        fontSize: '100%',
+        fontSize: '15pt',
+        marginLeft: '10px',
         textTransform: 'uppercase',
         background: "-webkit-linear-gradient(var(--thirdColor), var(--secondaryColor))",
         "-webkit-background-clip": "text",
         "-webkit-text-fill-color": "transparent",
-
     },
     divider: {
         background: "-webkit-linear-gradient(var(--fourthColor), var(--thirdColor))",
@@ -65,7 +70,8 @@ export default function Footer() {
                         <Tooltip title="view linkedin">
                                 <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><LinkedInIcon className={classes.icon}/><span className={classes.linkText}>linkedin</span></a>
                         </Tooltip>
-                        <span className={classes.divider}>/</span>
+                </div>
+                <div className={classes.root2}>
                         <Tooltip title="email me">
                                 <a className={classes.linkWhite} target="blank" href="mailto:nremy@usc.edu"><MailOutlineIcon className={classes.icon}/><span className={classes.linkText}> nremy@usc.edu </span></a>
                         </Tooltip>
