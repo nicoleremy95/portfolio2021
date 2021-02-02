@@ -38,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    color: 'black',
+    textTransform: 'uppercase'
   },
   sectionDesktop: {
     display: 'none',
@@ -171,8 +173,8 @@ export default function PrimarySearchAppBar() {
                 </Link>
             </Tooltip>
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Nicole Remy
+          <Typography className={classes.title} noWrap>
+            <h1>Nicole Remy</h1>
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
@@ -225,7 +227,7 @@ export default function PrimarySearchAppBar() {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
+      {/* {renderMenu} */}
     </div>
   );
 }
