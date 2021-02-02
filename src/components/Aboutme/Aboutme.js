@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) =>
 
     },
     logo: {
-        paddingTop: '10vh',
+        paddingTop: '20px',
         marginBottom: '150px',
     },
     bio: {

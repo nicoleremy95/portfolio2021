@@ -26,8 +26,7 @@ export default function LandingP() {
              {/* <div id="overlay">
                 <Loading/> 
              </div> */}
-            {/* <Logo/> */}
-                
+            {/* <Logo/> */}    
         </div>
     )
 }

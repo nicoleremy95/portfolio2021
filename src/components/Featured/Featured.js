@@ -69,15 +69,13 @@ const featuredArr =[
 const useStyles = makeStyles((Theme) =>
   createStyles({
     root: {
-      // backgroundImage: "linear-gradient(to bottom right, #1aa6b7, #f56a79);",  
-      // backgroundColor: '#d9ecf2',
       backgroundColor: "var(--mainColor)",
       backgroundImage: "linear-gradient(315deg, rgba(230, 164, 144, 0), rgba(230, 164, 144, 0.2))",
-      padding: '1vh'
+      // padding: '1vh'
     },
     appTitle: {
       fontSize: "7vw",
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
     },
     featured: {
       background: "-webkit-linear-gradient(var(--thirdColor), var(--fourthColor))",
@@ -91,8 +89,12 @@ const useStyles = makeStyles((Theme) =>
       marginTop: '10vh'
     },
     links: {
-      marginTop: '-12%'
+      marginTop: '-5%'
     },
+    logo: {
+      paddingTop: '20px',
+      marginBottom: '20px'
+    }
   }),
 );
 

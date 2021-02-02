@@ -11,11 +11,11 @@ const useStyles = makeStyles(()=>
     createStyles({
         resumeContainer: {
             // margin:"auto",
-            width: "100% !important",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: '3vh'
+            // width: "100% !important",
+            // display: "flex",
+            // flexDirection: "column",
+            // alignItems: "center",
+            // padding: '3vh'
         },
         resume: {
             display: "flex",
@@ -24,7 +24,7 @@ const useStyles = makeStyles(()=>
             maxWidth: '100%'
         },
         logo: {
-            paddingTop: '10vh',
+            paddingTop: '20px',
             marginBottom: '150px',
         },
     })
@@ -41,8 +41,8 @@ export default function Resume(props) {
 
     return (
         <div className={classes.resumeContainer}>
-            {/* <Container maxWidth="xs"> */}
-            <Grid xs={10}>
+            <Container maxWidth="md">
+            {/* <Grid xs={10}> */}
                 <section className={classes.logo}>
                     <Logo title="resume" />
                 </section>    
@@ -62,9 +62,9 @@ export default function Resume(props) {
                         </div>
                     ))}
                 </Document>
-            </Grid>
+            {/* </Grid> */}
                 
-            {/* </Container> */}
+            </Container>
             
         </div>
     );

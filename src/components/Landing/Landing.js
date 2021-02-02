@@ -29,7 +29,7 @@ const useStyles = makeStyles(() =>
         marginBottom: '50px'
     },
     logo: {
-        paddingTop: '10vh',
+        paddingTop: '20px',
         marginBottom: '150px',
     },
     buttonContainer: {

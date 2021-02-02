@@ -7,12 +7,12 @@ import CallMadeIcon from '@material-ui/icons/CallMade';
 
 const useStyles = makeStyles(()=>
     createStyles({
-        // root: {
-        //     flexGrow: 1,
-        // },
+        root: {
+            flexGrow: 1,
+        
+        },
         link: {
             textDecoration: "none",
-            
         },
         icon: {
             color: 'white',
@@ -27,7 +27,8 @@ const useStyles = makeStyles(()=>
             fontSize: '6vw !important',
             // textDecoration: 'underline',
             marginTop: '-20px',
-            marginBottom: '1vh',
+            marginBottom: "20px",
+
             "&:hover":{
                 background:"linear-gradient(to right,var(--fourthColor) 0%,var(--fourthColor) 5px,transparent)",
             }
