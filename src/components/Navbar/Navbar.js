@@ -39,20 +39,6 @@ const useStyles = makeStyles((theme) => ({
       display: 'block',
     },
   },
-  
-  inputRoot: {
-    color: 'inherit',
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-  },
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
@@ -68,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
   appBarLinkBlack: {
     textDecoration: "none",
     color: "black !important"
+  },
+  homeBtnLink: {
+    paddingLeft: "20px",
+    paddingRight: "20px"
   }
 }));
 
@@ -174,9 +164,10 @@ export default function PrimarySearchAppBar() {
           >
             <Tooltip title="home" aria-label="home">
                 <Link
-                        to="/"
-                    >
-                        <HomeButton />
+                  className={classes.homeBtnLink}
+                  to="/"
+                >
+                  <HomeButton />
                 </Link>
             </Tooltip>
           </IconButton>
