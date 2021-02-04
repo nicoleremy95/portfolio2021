@@ -135,7 +135,7 @@ export default function Aboutme() {
                             
                             
                             <Tooltip title="view GitHub">
-                                <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
+                                <a className={classes.linkWhite} target="blank" href="https://github.com/nicoleremy95"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>Github</span></a>
                             </Tooltip>
                             <span className={classes.divider}>/</span>
                             <Tooltip title="view Linkedin">

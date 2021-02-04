@@ -74,7 +74,7 @@ export default function Footer() {
             <Container maxWidth="sm">
                 <div className={classes.root}>
                         <Tooltip title="view github">
-                            <a className={classes.linkWhite} target="blank" href="https://www.linkedin.com/in/nicole-remy-190202166/"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>github</span></a>
+                            <a className={classes.linkWhite} target="blank" href="https://github.com/nicoleremy95"><GitHubIcon className={classes.icon}/><span className={classes.linkText}>github</span></a>
                         </Tooltip>
                         <span className={classes.divider}>/</span>
 

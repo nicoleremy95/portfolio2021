@@ -24,9 +24,9 @@ import { Link } from 'react-router-dom';
 import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles((theme) => ({
-    appbar: {
-        backgroundColor: 'white'
-      },
+  appbar: {
+      backgroundColor: 'white'
+    },
   grow: {
     flexGrow: 1,
   },
